@@ -12,6 +12,8 @@ import org.beuwi.simulator.platform.ui.dialog.IDialogBoxType.DOCUMENT;
 import org.beuwi.simulator.platform.ui.dialog.IDialogBoxView;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
+
 public class RenameBotDialog extends IDialogBoxView
 {
 	@FXML private Label label;
@@ -22,14 +24,12 @@ public class RenameBotDialog extends IDialogBoxView
 
 	private String name;
 
-	public RenameBotDialog(String name)
-	{
+	public RenameBotDialog(String name) throws MalformedURLException {
 		super(DOCUMENT.EVENT);
 		this.name = name;
 	}
 
-	public void display()
-	{
+	public void display() throws MalformedURLException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(ResourceUtils.getForm("RenameBotDialog"));
 		loader.setController(this);
@@ -63,8 +63,12 @@ public class RenameBotDialog extends IDialogBoxView
 
         btnRename.setOnAction(event ->
         {
-            action();
-        });
+			try {
+				action();
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
+		});
 
         field.textProperty().addListener((observable, oldString, newString) ->
         {
@@ -77,8 +81,12 @@ public class RenameBotDialog extends IDialogBoxView
             {
                 if (!btnRename.isDisable())
                 {
-                    action();
-                }
+					try {
+						action();
+					} catch (MalformedURLException e) {
+						e.printStackTrace();
+					}
+				}
             }
         });
 
@@ -87,8 +95,7 @@ public class RenameBotDialog extends IDialogBoxView
       	field.requestFocus();
 	}
 
-	private void action()
-	{
+	private void action() throws MalformedURLException {
 		RenameBotAction.update(name, field.getText()); close();
 	}
 }

@@ -12,6 +12,8 @@ import org.beuwi.simulator.platform.ui.components.IListView;
 import org.beuwi.simulator.platform.ui.components.ITextArea;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
+
 public class DebugRoomTab
 {
 	private static ObservableMap<String, Object> nameSpace;
@@ -32,30 +34,6 @@ public class DebugRoomTab
         IListView listView = (IListView) nameSpace.get("listView");
 		ITextArea textArea = (ITextArea) nameSpace.get("textArea");
 		Button    button   = (Button) nameSpace.get("button");
-
-		textArea.setOnKeyPressed(event ->
-		{
-			if (event.getCode().equals(KeyCode.ENTER))
-			{
-				if (event.isShiftDown())
-				{
-					textArea.appendText(System.lineSeparator());
-					event.consume();
-					return ;
-				}
-
-				if (button.isDisable())
-				{
-					textArea.setText("");
-					event.consume();
-					return ;
-				}
-
-				AddChatMessageAction.update(textArea.getText(), false);
-				textArea.clear();
-				event.consume();
-			}
-		});
 
 		textArea.textProperty().addListener((observable, oldString, newString) ->
 		{

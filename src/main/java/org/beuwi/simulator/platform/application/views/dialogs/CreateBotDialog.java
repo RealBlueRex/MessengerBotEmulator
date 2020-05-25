@@ -13,6 +13,8 @@ import org.beuwi.simulator.platform.ui.dialog.IDialogBoxType;
 import org.beuwi.simulator.platform.ui.dialog.IDialogBoxView;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
+
 public class CreateBotDialog extends IDialogBoxView
 {
 	@FXML private TextField txfScriptName;
@@ -22,13 +24,11 @@ public class CreateBotDialog extends IDialogBoxView
 	private Button btnCreate;
 	private Button btnCancel;
 
-	public CreateBotDialog()
-	{
+	public CreateBotDialog() throws MalformedURLException {
 		super(IDialogBoxType.APPLICATION);
 	}
 
-	public void display()
-	{
+	public void display() throws MalformedURLException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(ResourceUtils.getForm("CreateBotDialog"));
 		loader.setController(this);
@@ -62,7 +62,11 @@ public class CreateBotDialog extends IDialogBoxView
 
 		btnCreate.setOnAction(event ->
 		{
-			action();
+			try {
+				action();
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
 		});
 
 		txfScriptName.textProperty().addListener((observable, oldString, newString) ->
@@ -76,7 +80,11 @@ public class CreateBotDialog extends IDialogBoxView
 			{
 				if (!btnCreate.isDisable())
 				{
-					action();
+					try {
+						action();
+					} catch (MalformedURLException e) {
+						e.printStackTrace();
+					}
 				}
 			}
 		});
@@ -84,8 +92,7 @@ public class CreateBotDialog extends IDialogBoxView
 		Platform.runLater(() -> txfScriptName.requestFocus());
 	}
 
-	private void action()
-	{
+	private void action() throws MalformedURLException {
 		CreateBotAction.update
 		(
 		    txfScriptName.getText(),

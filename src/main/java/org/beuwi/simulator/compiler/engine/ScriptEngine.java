@@ -7,7 +7,6 @@ import org.beuwi.simulator.compiler.api.Bridge;
 import org.beuwi.simulator.compiler.api.DataBase;
 import org.beuwi.simulator.compiler.api.Device;
 import org.beuwi.simulator.compiler.api.FileStream;
-import org.beuwi.simulator.compiler.api.GlobalLog;
 import org.beuwi.simulator.compiler.api.ImageDB;
 import org.beuwi.simulator.compiler.api.Log;
 import org.beuwi.simulator.compiler.api.Replier;
@@ -25,6 +24,7 @@ import org.mozilla.javascript.Script;
 import org.mozilla.javascript.ScriptableObject;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.util.HashMap;
 
 public class ScriptEngine
@@ -46,12 +46,17 @@ public class ScriptEngine
 				continue ;
 			}
 
-			Platform.runLater(() -> callResponder(name, room, message, sender, isGroupChat, imageDB, packageName));
+			Platform.runLater(() -> {
+				try {
+					callResponder(name, room, message, sender, isGroupChat, imageDB, packageName);
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			});
 		}
 	}
 
-	public static boolean initialize(String name, boolean isManual, boolean ignoreError)
-	{
+	public static boolean initialize(String name, boolean isManual, boolean ignoreError) throws MalformedURLException {
 		LogManager.append("컴파일 시작 : " + name, ILogType.EVENT);
 
 		compiling.put(name, true);
@@ -106,7 +111,6 @@ public class ScriptEngine
 
 			ScriptableObject.defineProperty(scope, "Api", ScriptUtils.convert(new Api(scope, name)), flags);
 			ScriptableObject.defineProperty(scope, "Device", ScriptUtils.convert(new Device(scope)), flags);
-			ScriptableObject.defineProperty(scope, "GlobalLog", ScriptUtils.convert(new GlobalLog(scope)), flags);
 			ScriptableObject.defineProperty(scope, "Log", ScriptUtils.convert(new Log(scope, name)), flags);
 			ScriptableObject.defineProperty(scope, "DataBase", ScriptUtils.convert(new DataBase(scope, name)), flags);
 			ScriptableObject.defineProperty(scope, "Utils", ScriptUtils.convert(new Utils(scope, name)), flags);
@@ -164,8 +168,7 @@ public class ScriptEngine
 		return true;
 	}
 
-	public static void callResponder(String name, String room, String message, String sender, Boolean isGroupChat, ImageDB imageDB, String packageName)
-	{
+	public static void callResponder(String name, String room, String message, String sender, Boolean isGroupChat, ImageDB imageDB, String packageName) throws MalformedURLException {
 		ScriptableObject scope = container.get(name).getExecScope();
 		Function responder = container.get(name).getResponder();
 

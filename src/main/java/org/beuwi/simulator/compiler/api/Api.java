@@ -16,6 +16,7 @@ import org.mozilla.javascript.Undefined;
 import org.mozilla.javascript.annotations.JSFunction;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 
 public class Api extends ScriptableObject
@@ -96,28 +97,23 @@ public class Api extends ScriptableObject
 				return false;
 			}
 		}
-
 		return true;
 	}
 	
 	@JSFunction
-	public Boolean reload(String name, Boolean stopOnError)
-	{
+	public Boolean reload(String name, Boolean stopOnError) throws MalformedURLException {
 		name = getScriptName(name);
-
 		if (!Undefined.isUndefined(name))
 		{
 			if (!FileManager.getBotScript(name).exists())
 			{
 				return false;
 			}
-
 			return ScriptManager.setInitialize(name, false, !stopOnError);
 		}
 		else 
 		{
 			ScriptManager.allInitialize(false);
-
 			return true;
 		}
 	}
@@ -154,8 +150,7 @@ public class Api extends ScriptableObject
 	}
 	
 	@JSFunction
-	public Boolean isOn(String name)
-	{
+	public Boolean isOn(String name) throws MalformedURLException {
 		return Settings.getScriptSetting(name).getBoolean("power");
 	}
 
@@ -179,15 +174,12 @@ public class Api extends ScriptableObject
 					return true;
 				}
 			}
-
 			return false;
 		}
-
 		if (ScriptEngine.compiling.get(name) == null)
 		{
 			return false;
 		}
-
 		return ScriptEngine.compiling.get(name);
 	}
 
@@ -207,8 +199,7 @@ public class Api extends ScriptableObject
 	}
 
 	@JSFunction
-	public Boolean replyRoom(String room, String message, Boolean hideToast)
-	{
+	public Boolean replyRoom(String room, String message, Boolean hideToast) throws MalformedURLException {
 		AddChatMessageAction.update(message, false);
 
 		return true;
@@ -223,7 +214,7 @@ public class Api extends ScriptableObject
 	@JSFunction
 	public void showToast(String content, int length)
 	{
-		ShowToastMessageAction.update(content);
+		new ShowToastMessageAction(content, 0, 0).showtoast();
 	}
 
 	@JSFunction
@@ -233,8 +224,7 @@ public class Api extends ScriptableObject
 	}
 
 	@JSFunction
-	public Boolean makeNoti(String title, String content, int id)
-	{
+	public Boolean makeNoti(String title, String content, int id) {
 		ShowNotificationAction.update(title, content);
 
 		return true;

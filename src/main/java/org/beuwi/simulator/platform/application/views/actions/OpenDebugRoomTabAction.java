@@ -5,6 +5,8 @@ import org.beuwi.simulator.platform.application.views.tabs.DebugRoomTab;
 import org.beuwi.simulator.settings.Settings;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
+
 public class OpenDebugRoomTabAction
 {
 	private static Node pane;
@@ -14,8 +16,7 @@ public class OpenDebugRoomTabAction
 		pane = DebugRoomTab.getRoot();
 	}
 
-	public static void update()
-	{
+	public static void update() throws MalformedURLException {
 		AddEditorTabAction.update
 		(
 			ResourceUtils.getImage("tab_debug"),

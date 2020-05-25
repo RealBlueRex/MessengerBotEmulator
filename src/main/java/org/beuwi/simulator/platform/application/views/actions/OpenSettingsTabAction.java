@@ -3,6 +3,8 @@ package org.beuwi.simulator.platform.application.views.actions;
 import javafx.scene.layout.StackPane;
 import org.beuwi.simulator.platform.application.views.tabs.SettingsTab;
 
+import java.net.MalformedURLException;
+
 public class OpenSettingsTabAction
 {
 	private static StackPane pane;
@@ -12,8 +14,7 @@ public class OpenSettingsTabAction
 		pane = SettingsTab.getRoot();
 	}
 
-	public static void update()
-	{
+	public static void update() throws MalformedURLException {
 		AddEditorTabAction.update("@global::settings", "Settings", pane);
 	}
 }

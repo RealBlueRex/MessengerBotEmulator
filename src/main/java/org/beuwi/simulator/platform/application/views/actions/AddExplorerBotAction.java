@@ -24,6 +24,8 @@ import org.beuwi.simulator.platform.ui.components.IMenuItem;
 import org.beuwi.simulator.platform.ui.components.IToggleButton;
 import org.beuwi.simulator.settings.Settings;
 
+import java.net.MalformedURLException;
+
 public class AddExplorerBotAction
 {
 	private static IListView listView;
@@ -33,22 +35,45 @@ public class AddExplorerBotAction
 		listView = ActiveAreaPart.BotsTab.getComponent();
 	}
 
-	public static void update(String name)
-	{
+	public static void update(String name) throws MalformedURLException {
 		IContextMenu menu = new IContextMenu
 		(
-			new IMenuItem("Compile", event -> ScriptManager.setInitialize(name, true, false)),
+			new IMenuItem("Compile", event -> {
+				try {
+					ScriptManager.setInitialize(name, true, false);
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			}),
 			new IMenuItem("Power On / Off", event -> BotManager.setPower(name, !BotManager.getPower(name))),
 			new SeparatorMenuItem(),
 			new IMenuItem("Show Log", event -> OpenBotLogTabAction.update(name)),
 			new SeparatorMenuItem(),
-			new IMenuItem("Show in Explorer", "Shift + Alt + R", event -> OpenDesktopAction.update(FileManager.getBotFolder(name))),
+			new IMenuItem("Show in Explorer", "Shift + Alt + R", event -> {
+				try {
+					OpenDesktopAction.update(FileManager.getBotFolder(name));
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			}),
 			new SeparatorMenuItem(),
 			new IMenuItem("Copy Path", "Ctrl + Alt + C", event -> CopyAction.update(FileManager.getBotFolder(name).getAbsolutePath())),
 			new IMenuItem("Copy Relative Path", "Ctrl + Shift + C", event -> CopyAction.update(FileManager.getBotFolder(name).getPath())),
 			new SeparatorMenuItem(),
-			new IMenuItem("Rename", event -> new RenameBotDialog(name).display()),
-			new IMenuItem("Delete", event -> new DeleteBotDialog(name).display())
+			new IMenuItem("Rename", event -> {
+				try {
+					new RenameBotDialog(name).display();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			}),
+			new IMenuItem("Delete", event -> {
+				try {
+					new DeleteBotDialog(name).display();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			})
 		);
 
 		HBox 			item   = new HBox();			// Bot Item Cell
@@ -74,7 +99,11 @@ public class AddExplorerBotAction
 		{
 			if (MouseButton.PRIMARY.equals(event.getButton()) || MouseButton.MIDDLE.equals(event.getButton()))
 			{
-				OpenScriptTabAction.update(name);
+				try {
+					OpenScriptTabAction.update(name);
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
 			}
 		});
 
@@ -83,7 +112,11 @@ public class AddExplorerBotAction
 		{
 			if (MouseButton.PRIMARY.equals(event.getButton()))
 			{
-				ScriptManager.setInitialize(name, true, false);
+				try {
+					ScriptManager.setInitialize(name, true, false);
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
 			}
 		});
 
@@ -96,7 +129,11 @@ public class AddExplorerBotAction
 		power.setSelected(setting.getBoolean("power"));
 		power.selectedProperty().addListener((observable, oldValue, newValue) ->
 		{
-			setting.putBoolean("power", newValue);
+			try {
+				setting.putBoolean("power", newValue);
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
 		});
 
 		listView.getItems().add(item);

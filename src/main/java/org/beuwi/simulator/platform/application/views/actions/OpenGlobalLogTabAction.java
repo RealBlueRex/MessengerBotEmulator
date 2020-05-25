@@ -4,6 +4,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import org.beuwi.simulator.platform.application.views.tabs.GlobalLogTab;
 
+import java.net.MalformedURLException;
+
 public class OpenGlobalLogTabAction
 {
 	private static ListView<AnchorPane> listView;
@@ -13,8 +15,7 @@ public class OpenGlobalLogTabAction
 		listView = GlobalLogTab.getComponent();
 	}
 
-	public static void update()
-	{
+	public static void update() throws MalformedURLException {
 		AddEditorTabAction.update("@global::log", "Global Log", listView);
 	}
 }

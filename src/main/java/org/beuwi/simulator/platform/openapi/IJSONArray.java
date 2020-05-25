@@ -6,6 +6,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.util.List;
 
 public class IJSONArray extends JSONArray
@@ -15,8 +16,7 @@ public class IJSONArray extends JSONArray
 		super();
 	}
 
-	public IJSONArray(File file)
-	{
+	public IJSONArray(File file) throws MalformedURLException {
 		try
 		{
 			this.addAll((List) new JSONParser().parse(FileManager.read(file)));

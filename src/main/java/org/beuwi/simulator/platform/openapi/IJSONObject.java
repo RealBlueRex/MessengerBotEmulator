@@ -6,6 +6,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.util.Map;
 
 public class IJSONObject extends JSONObject
@@ -15,8 +16,7 @@ public class IJSONObject extends JSONObject
 		super();
 	}
 
-	public IJSONObject(File file)
-	{
+	public IJSONObject(File file) throws MalformedURLException {
 		try
 		{
 			this.putAll((JSONObject) new JSONParser().parse(FileManager.read(file)));
@@ -57,8 +57,7 @@ public class IJSONObject extends JSONObject
 		return Boolean.valueOf("" + get(type));
 	}
 
-	public void putString(String type, String data)
-	{
+	public void putString(String type, String data) throws MalformedURLException {
 		this.put(type, data);
 	}
 	
@@ -67,18 +66,15 @@ public class IJSONObject extends JSONObject
 		this.put(type, data);
 	}
 
-	public void putInt(String type, int data)
-	{
+	public void putInt(String type, int data) throws MalformedURLException {
 	    this.put(type, data);
 	}
 
-	public void putBoolean(String type, boolean data)
-	{
+	public void putBoolean(String type, boolean data) throws MalformedURLException {
 		this.put(type, data);
 	}
 
-	public void putMap(Map map)
-	{
+	public void putMap(Map map) throws MalformedURLException {
 		this.putAll(map);
 	}
 

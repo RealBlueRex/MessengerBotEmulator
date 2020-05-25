@@ -1,9 +1,13 @@
 package org.beuwi.simulator.platform.application.views.actions;
 
+import com.jfoenix.responsive.JFXResponsiveHandler;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.ImagePattern;
@@ -15,6 +19,15 @@ import org.beuwi.simulator.platform.ui.components.IContextMenu;
 import org.beuwi.simulator.platform.ui.components.IListView;
 import org.beuwi.simulator.platform.ui.components.IMenuItem;
 import org.beuwi.simulator.settings.Settings;
+import org.beuwi.simulator.utils.ResourceUtils;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.io.IOException;
+import java.net.MalformedURLException;
 
 public class AddChatMessageAction
 {
@@ -25,12 +38,28 @@ public class AddChatMessageAction
 		listView = DebugRoomTab.getComponent();
 	}
 
-	public static void update(String message, boolean isBot)
-	{
+	public static void update(String message, boolean isBot) {
 		AnchorPane pane = new AnchorPane();
 
 		HBox cell = new HBox(pane);
 		HBox item = new HBox();
+		String finalMessage = message;
+		cell.setOnMouseClicked(event -> {
+			if(finalMessage.length() < 500) {
+				return;
+			}
+			JPanel panel=new JPanel();
+			JScrollPane scrollBar=new JScrollPane(panel,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+			JLabel viewall = new JLabel(finalMessage);
+			JFrame frame=new JFrame("전체보기");
+			panel.add(viewall);
+			frame.add(scrollBar);
+			frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			frame.setSize(400,400);
+			frame.setVisible(true);
+		});
+		if(message.length() >= 500)
+			message = message.substring(0, 500 - 1) + "...";
 
 		Label chat = new Label(message);
 		chat.setText(message);
@@ -40,7 +69,6 @@ public class AddChatMessageAction
 		Settings.Public data = Settings.getPublicSetting("debug");
 
 		String name = data.getString(!isBot ? "sender" : "bot");
-
 		if (!isBot)
 		{
 			chat.getStyleClass().add("sender-label");
@@ -91,14 +119,4 @@ public class AddChatMessageAction
 			ScriptManager.run(message);
 		}
 	}
-
-	/* if (message.length() >= 200)
-	{
-		// 전체보기
-	}
-
-	if (message.length() >= 20000)
-	{
-		return ;
-	} */
 }

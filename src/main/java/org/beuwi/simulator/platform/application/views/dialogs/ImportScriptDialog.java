@@ -17,6 +17,7 @@ import org.beuwi.simulator.platform.ui.dialog.IDialogBoxView;
 import org.beuwi.simulator.utils.ResourceUtils;
 
 import java.io.File;
+import java.net.MalformedURLException;
 
 public class ImportScriptDialog extends IDialogBoxView
 {
@@ -30,13 +31,11 @@ public class ImportScriptDialog extends IDialogBoxView
 
 	private File file;
 
-	public ImportScriptDialog()
-	{
+	public ImportScriptDialog() throws MalformedURLException {
 		super(IDialogBoxType.APPLICATION);
 	}
 
-	public void display()
-	{
+	public void display() throws MalformedURLException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(ResourceUtils.getForm("ImportScriptDialog"));
 		loader.setController(this);
@@ -86,7 +85,11 @@ public class ImportScriptDialog extends IDialogBoxView
 
 		btnImport.setOnAction(event ->
 		{
-			action();
+			try {
+				action();
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
 		});
 
 		txfScriptName.textProperty().addListener((observable, oldString, newString) ->
@@ -100,7 +103,11 @@ public class ImportScriptDialog extends IDialogBoxView
 			{
 				if (!btnImport.isDisable())
 				{
-					action();
+					try {
+						action();
+					} catch (MalformedURLException e) {
+						e.printStackTrace();
+					}
 				}
 			}
 		});
@@ -108,8 +115,7 @@ public class ImportScriptDialog extends IDialogBoxView
 		Platform.runLater(() -> btnScriptOpen.requestFocus());
 	}
 
-	private void action()
-	{
+	private void action() throws MalformedURLException {
 		CreateBotAction.update
 		(
 			file.getName(),

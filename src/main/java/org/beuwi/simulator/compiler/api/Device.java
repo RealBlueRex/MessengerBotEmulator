@@ -1,5 +1,6 @@
 package org.beuwi.simulator.compiler.api;
 
+import org.beuwi.simulator.settings.Settings;
 import org.mozilla.javascript.ScriptableObject;
 import org.mozilla.javascript.annotations.JSFunction;
 
@@ -26,68 +27,68 @@ public class Device extends ScriptableObject
 	@JSFunction
 	public int getAndroidVersionCode()
 	{
-		return 28;
+		return Settings.getPublicSetting("device").getInt("androidVersionCode");
 	}
 
 	@JSFunction
 	public String getAndroidVersionName()
 	{
-		return "9";
+		return Settings.getPublicSetting("device").getString("androidVersionName");
 	}
 
 	@JSFunction
 	public String getPhoneBrand()
 	{
-		return "samsung";
+		return Settings.getPublicSetting("device").getString("phoneBrand");
 	}
 
 	@JSFunction
 	public String getPhoneModel()
 	{
-		return "greatlteks";
+		return Settings.getPublicSetting("device").getString("phoneModel");
 	}
 
     @JSFunction
 	public Boolean isCharging()
 	{
-		return true;
+		return Settings.getPublicSetting("device").getBoolean("isCharging");
 	}
 	
     @JSFunction
 	public String getPlugType()
 	{
-		return "usb";
+		return Settings.getPublicSetting("device").getString("plugType");
 	}
 	
     @JSFunction
 	public int getBatteryLevel()
 	{
-		return 100;
+		return Settings.getPublicSetting("device").getInt("plugLevel");
 	}
 	
     @JSFunction
 	public int getBatteryHealth()
 	{
 		// BATTERY_HEALTH_GOOD
-		return 3;
+		return Settings.getPublicSetting("device").getInt("batteryHealth");
 	}
 	
     @JSFunction
 	public int getBatteryTemperature()
 	{
-		return 1000;
+		return Settings.getPublicSetting("device").getInt("batteryTemperature");
 	}
 	
     @JSFunction
 	public int getBatteryVoltage()
 	{
-		return 10000;
+		return Settings.getPublicSetting("device").getInt("batteryVoltage");
 	}
 	
     @JSFunction
 	public int getBatteryStatus()
 	{
-		return 5;
+		return Settings.getPublicSetting("device").getInt("batteryStatus");
 	}
 	
     @JSFunction

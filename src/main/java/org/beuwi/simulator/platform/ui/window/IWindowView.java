@@ -42,6 +42,8 @@ import org.beuwi.simulator.platform.ui.components.IMenuItem;
 import org.beuwi.simulator.platform.ui.components.ISVGGlyph;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
+
 public class IWindowView extends StackPane
 {
 	private final double WINDOW_BORDER_WIDTH = 5;
@@ -86,8 +88,7 @@ public class IWindowView extends StackPane
 	private Region content;
 	private String title;
 
-	public IWindowView(Stage stage)
-	{
+	public IWindowView(Stage stage) {
 		this.stage = stage;
 		this.ievent = new IWindowEvent(this);
 
@@ -144,15 +145,51 @@ public class IWindowView extends StackPane
 	{
 		btnFileMenu.setMenus
 		(
-			new IMenuItem("New Bot", "Ctrl + N", event -> new CreateBotDialog().display()),
-			new IMenuItem("Import Script", "Ctrl + I", event -> new ImportScriptDialog().display()),
+			new IMenuItem("New Bot", "Ctrl + N", event -> {
+				try {
+					new CreateBotDialog().display();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			}),
+			new IMenuItem("Import Script", "Ctrl + I", event -> {
+				try {
+					new ImportScriptDialog().display();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			}),
 			new SeparatorMenuItem(),
-			new IMenuItem("Save", "Ctrl + S", event -> SaveEditorTabAction.update()),
-			new IMenuItem("Save All", event -> SaveAllEditorTabsAction.update()),
+			new IMenuItem("Save", "Ctrl + S", event -> {
+				try {
+					SaveEditorTabAction.update();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			}),
+			new IMenuItem("Save All", event -> {
+				try {
+					SaveAllEditorTabsAction.update();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			}),
 			new SeparatorMenuItem(),
-			new IMenuItem("Refresh All Bots", "Ctrl + Alt + Y", event -> RefreshBotsAction.update()),
+			new IMenuItem("Refresh All Bots", "Ctrl + Alt + Y", event -> {
+				try {
+					RefreshBotsAction.update();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			}),
 			new SeparatorMenuItem(),
-			new IMenuItem("Settings", "Ctrl + Alt + S", event -> OpenSettingsTabAction.update())
+			new IMenuItem("Settings", "Ctrl + Alt + S", event -> {
+				try {
+					OpenSettingsTabAction.update();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			})
 		);
 
 		btnEditMenu.setMenus
@@ -169,8 +206,20 @@ public class IWindowView extends StackPane
 
 		btnDebugMenu.setMenus
 		(
-			new IMenuItem("Show Global Log", "F8", event -> OpenGlobalLogTabAction.update()),
-			new IMenuItem("Open Debug Room", "F9", event -> OpenDebugRoomTabAction.update())
+			new IMenuItem("Show Global Log", "F8", event -> {
+				try {
+					OpenGlobalLogTabAction.update();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			}),
+			new IMenuItem("Open Debug Room", "F9", event -> {
+				try {
+					OpenDebugRoomTabAction.update();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
+			})
 		);
 	}
 
@@ -193,8 +242,7 @@ public class IWindowView extends StackPane
 		stage.setMaxHeight(maxH > 0 ? maxH : Double.MAX_VALUE);
 	}
 
-	public void create()
-	{
+	public void create() {
 		switch (type)
 		{
 			case WINDOW :

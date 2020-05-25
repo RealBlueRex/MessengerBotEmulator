@@ -6,6 +6,8 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.SelectionMode;
 import org.beuwi.simulator.managers.LogManager;
 
+import java.net.MalformedURLException;
+
 public class ILogView extends IListView
 {
 	{
@@ -13,13 +15,11 @@ public class ILogView extends IListView
 	}
 
 	// 인자 없으면 Global Log
-	public ILogView()
-	{
+	public ILogView() throws MalformedURLException {
 		this(null);
 	}
 
-	public ILogView(String name)
-	{
+	public ILogView(String name) throws MalformedURLException {
 		if (name != null)
 		{
 			setItems(LogManager.load(name));

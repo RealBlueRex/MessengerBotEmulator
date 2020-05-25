@@ -5,10 +5,11 @@ import org.beuwi.simulator.managers.BotManager;
 import org.beuwi.simulator.managers.FileManager;
 import org.beuwi.simulator.settings.Settings;
 
+import java.net.MalformedURLException;
+
 public class ScriptManager extends ScriptEngine
 {
-	public static void run(String message)
-	{
+	public static void run(String message) {
 		Settings.Public data = Settings.getPublicSetting("debug");
 
 		String  room 		= data.getString("room");
@@ -19,21 +20,18 @@ public class ScriptManager extends ScriptEngine
 		run(room, message, sender, isGroupChat, new ImageDB(), packageName);
 	}
 
-	public static boolean setInitialize(String name, boolean isManual, boolean ignoreError)
-	{
+	public static boolean setInitialize(String name, boolean isManual, boolean ignoreError) throws MalformedURLException {
 		return initialize(name, isManual, ignoreError);
 	}
 
-	public static void allInitialize(boolean isManual)
-	{
+	public static void allInitialize(boolean isManual) throws MalformedURLException {
 		for (String name : FileManager.getBotNames())
 		{
 			initialize(name, isManual, true);
 		}
 	}
 
-	public static void preInitialize()
-	{
+	public static void preInitialize() throws MalformedURLException {
 		if (!Settings.getPublicSetting("program").getBoolean("autoCompile"))
 		{
 			return ;

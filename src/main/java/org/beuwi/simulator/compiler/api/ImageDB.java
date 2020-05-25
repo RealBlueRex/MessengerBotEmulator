@@ -2,15 +2,14 @@ package org.beuwi.simulator.compiler.api;
 
 import org.beuwi.simulator.platform.application.views.dialogs.ShowErrorDialog;
 
+
 public class ImageDB 
 {
-    public String getProfileImage()
-    {
+    public String getProfileImage() {
         return getProfileBase64();
     }
 
-    public String getProfileBase64()
-	{
+    public String getProfileBase64() {
 		try
 		{
 			// byte[] bytes = IOUtils.toByteArray(FileManager.getDataFile("profile_bot.png"));
@@ -25,8 +24,7 @@ public class ImageDB
 		return null;
 	}
 
-	public int getProfileHash()
-	{
+	public int getProfileHash() {
 		return getProfileBase64().hashCode();
 	}
 

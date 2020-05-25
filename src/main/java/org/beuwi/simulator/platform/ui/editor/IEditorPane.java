@@ -20,6 +20,7 @@ import org.beuwi.simulator.platform.ui.components.IMenuItem;
 import org.beuwi.simulator.platform.ui.components.ISVGGlyph;
 import org.beuwi.simulator.platform.ui.components.ITabPane;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -132,7 +133,11 @@ public class IEditorPane extends ITabPane
 		split.setMinSize(35, 30);
 		split.setOnAction(event ->
 		{
-			SplitEditorPaneAction.update();
+			try {
+				SplitEditorPaneAction.update();
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
 		});
 
 		more.getStyleClass().add("tab-more-button");

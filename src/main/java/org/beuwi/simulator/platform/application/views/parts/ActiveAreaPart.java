@@ -31,6 +31,7 @@ import org.beuwi.simulator.utils.ResourceUtils;
 
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,8 +95,7 @@ public class ActiveAreaPart
 
 	public static class DebugTab
 	{
-		public static void initialize()
-		{
+		public static void initialize() throws MalformedURLException {
 			ToggleButton toggle = (ToggleButton) nameSpace.get("tgnDebugTab");
 
 			toggle.setOnMouseClicked(event ->
@@ -118,22 +118,33 @@ public class ActiveAreaPart
 
 			btnReloadAllBots.setOnAction(event ->
 			{
-				ScriptManager.allInitialize(true);
+				try {
+					ScriptManager.allInitialize(true);
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
 			});
 
 			btnOpenChatRoom.setOnAction(event ->
 			{
-				OpenDebugRoomTabAction.update();
+				try {
+					OpenDebugRoomTabAction.update();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
 			});
 
 			btnShowGlobalLog.setOnAction(event ->
 			{
-				OpenGlobalLogTabAction.update();
+				try {
+					OpenGlobalLogTabAction.update();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
 			});
 		}
 
-		private static void initOptionPane()
-		{
+		private static void initOptionPane() throws MalformedURLException {
 			ITextField txfRoomName    = (ITextField) nameSpace.get("txfRoomName");
 			ITextField txfSenderName  = (ITextField) nameSpace.get("txfSenderName");
 			ITextField txfBotName     = (ITextField) nameSpace.get("txfBotName");

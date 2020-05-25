@@ -8,6 +8,7 @@ import org.beuwi.simulator.platform.application.views.parts.EditorAreaPart;
 import org.beuwi.simulator.platform.ui.editor.IEditorPane;
 import org.beuwi.simulator.platform.ui.editor.IEditorTab;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 public class SplitEditorPaneAction
@@ -20,13 +21,11 @@ public class SplitEditorPaneAction
 	}
 
 	// 기본값 오른쪽
-	public static void update()
-	{
+	public static void update() throws MalformedURLException {
 		update(pane.getItems().size());
 	}
 
-	public static void update(int index)
-	{
+	public static void update(int index) throws MalformedURLException {
 		if (pane.getItems().size() < 4)
 		{
 			pane.getItems().add(index, new IEditorPane());
@@ -38,8 +37,7 @@ public class SplitEditorPaneAction
 	}
 
 	// 현재 가로만 지원
-	public static void update(IEditorTab tab, Side pos)
-	{
+	public static void update(IEditorTab tab, Side pos) throws MalformedURLException {
 		// IEditor Pane
 		List<Node> panes = pane.getItems();
 

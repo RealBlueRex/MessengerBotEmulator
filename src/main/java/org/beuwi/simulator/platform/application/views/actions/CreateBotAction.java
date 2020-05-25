@@ -4,11 +4,11 @@ import org.beuwi.simulator.managers.FileManager;
 import org.beuwi.simulator.platform.application.views.dialogs.ExistsBotDialog;
 
 import java.io.File;
+import java.net.MalformedURLException;
 
 public class CreateBotAction
 {
-	public static void update(String name, String content, boolean isImport, boolean isUnified, boolean isOffError)
-	{
+	public static void update(String name, String content, boolean isImport, boolean isUnified, boolean isOffError) throws MalformedURLException {
 		File project = FileManager.getBotFolder(name);
 
 		if (project.exists())

@@ -5,6 +5,8 @@ import org.beuwi.simulator.platform.ui.components.ILogType;
 import org.mozilla.javascript.ScriptableObject;
 import org.mozilla.javascript.annotations.JSFunction;
 
+import java.net.MalformedURLException;
+
 public class Log extends ScriptableObject
 {
 	final String name;
@@ -29,44 +31,37 @@ public class Log extends ScriptableObject
 	}
 
 	@JSFunction
-	public void d(String data, Boolean showToast)
-	{
+	public void d(String data, Boolean showToast) throws MalformedURLException {
 		debug(data, showToast);
 	}
 
 	@JSFunction
-	public void e(String data, Boolean showToast)
-	{
+	public void e(String data, Boolean showToast) throws MalformedURLException {
 		error(data, showToast);
 	}
 
 	@JSFunction
-	public void i(String data, Boolean showToast)
-	{
+	public void i(String data, Boolean showToast) throws MalformedURLException {
 		info(data, showToast);
 	}
 
 	@JSFunction
-	public void debug(String data, Boolean showToast)
-	{
+	public void debug(String data, Boolean showToast) throws MalformedURLException {
 		LogManager.append(name, data, ILogType.DEBUG);
 	}
 
 	@JSFunction
-	public void error(String data, Boolean showToast)
-	{
+	public void error(String data, Boolean showToast) throws MalformedURLException {
 		LogManager.append(name, data, ILogType.ERROR);
 	}
 
 	@JSFunction
-	public void info(String data, Boolean showToast)
-	{
+	public void info(String data, Boolean showToast) throws MalformedURLException {
 		LogManager.append(name, data, ILogType.EVENT);
 	}
 
 	@JSFunction
-	public void clear()
-	{
+	public void clear() throws MalformedURLException {
 		LogManager.clear(name);
 	}
 }

@@ -17,6 +17,7 @@ import org.beuwi.simulator.platform.ui.window.IWindowType;
 import org.beuwi.simulator.platform.ui.window.IWindowView;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -39,15 +40,13 @@ public class IDialogBoxView extends StackPane implements Initializable
 	String title;
 
 	// Document Type
-	public IDialogBoxView(DOCUMENT document)
-	{
+	public IDialogBoxView(DOCUMENT document) {
 		this(IDialogBoxType.DOCUMENT);
 
 		this.document = document;
 	}
 
-	public IDialogBoxView(IDialogBoxType type)
-	{
+	public IDialogBoxView(IDialogBoxType type) {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(ResourceUtils.getForm("DialogBoxView"));
 		loader.setController(this);
@@ -92,8 +91,7 @@ public class IDialogBoxView extends StackPane implements Initializable
 		return btnNO;
 	}
 
-	public void create()
-	{
+	public void create() {
 		switch (type)
 		{
 			case APPLICATION :

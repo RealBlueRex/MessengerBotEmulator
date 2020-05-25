@@ -8,20 +8,21 @@ import org.beuwi.simulator.platform.ui.dialog.IDialogBoxType.DOCUMENT;
 import org.beuwi.simulator.platform.ui.dialog.IDialogBoxView;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
+
 public class ShowEventDialog extends IDialogBoxView
 {
 	@FXML private Label label;
 
-	private String text;
+	private String title, message;
 
-	public ShowEventDialog(String text)
-	{
-		super(DOCUMENT.ERROR);
-		this.text = text;
+	public ShowEventDialog(String title, String message) {
+		super(DOCUMENT.EVENT);
+		this.title = title;
+		this.message = message;
 	}
 
-	public void display()
-	{
+	public void display() {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(ResourceUtils.getForm("ShowEventDialog"));
 		loader.setController(this);
@@ -41,12 +42,12 @@ public class ShowEventDialog extends IDialogBoxView
 
 		setUseButton(true, false);
 		setContent(root);
-		setTitle("Error");
+		setTitle(title);
 		create();
 	}
 
 	private void initialize()
 	{
-		label.setText(text);
+		label.setText(message);
 	}
 }

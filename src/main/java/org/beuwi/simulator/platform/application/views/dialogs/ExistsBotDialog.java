@@ -8,20 +8,20 @@ import org.beuwi.simulator.platform.ui.dialog.IDialogBoxType.DOCUMENT;
 import org.beuwi.simulator.platform.ui.dialog.IDialogBoxView;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
+
 public class ExistsBotDialog extends IDialogBoxView
 {
     @FXML private Label label;
 
     private String name;
 
-    public ExistsBotDialog(String name)
-    {
+    public ExistsBotDialog(String name) throws MalformedURLException {
         super(DOCUMENT.ERROR);
         this.name = name;
     }
 
-    public void display()
-    {
+    public void display() throws MalformedURLException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(ResourceUtils.getForm("ExistsBotDialog"));
         loader.setController(this);

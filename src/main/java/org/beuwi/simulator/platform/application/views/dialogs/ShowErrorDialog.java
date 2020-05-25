@@ -11,6 +11,7 @@ import org.beuwi.simulator.utils.ResourceUtils;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.MalformedURLException;
 
 public class ShowErrorDialog extends IDialogBoxView
 {
@@ -19,15 +20,12 @@ public class ShowErrorDialog extends IDialogBoxView
 
 	private Exception error;
 
-	public ShowErrorDialog(Exception error)
-	{
+	public ShowErrorDialog(Exception error) {
 		super(DOCUMENT.ERROR);
-
 		this.error = error;
 	}
 
-	public void display()
-	{
+	public void display() {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(ResourceUtils.getForm("ShowErrorDialog"));
 		loader.setController(this);

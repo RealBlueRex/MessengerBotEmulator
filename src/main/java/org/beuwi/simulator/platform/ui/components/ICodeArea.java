@@ -11,6 +11,7 @@ import org.fxmisc.richtext.LineNumberFactory;
 import org.fxmisc.richtext.model.StyleSpans;
 import org.fxmisc.richtext.model.StyleSpansBuilder;
 
+import java.net.MalformedURLException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.function.IntFunction;
@@ -106,7 +107,13 @@ public class ICodeArea extends StackPane
 			{
 				switch (event.getCode())
 				{
-					case S : SaveEditorTabAction.update(); break;
+					case S :
+						try {
+							SaveEditorTabAction.update();
+						} catch (MalformedURLException e) {
+							e.printStackTrace();
+						}
+						break;
 				}
 			}
 		});

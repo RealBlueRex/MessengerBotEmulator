@@ -38,6 +38,7 @@ import org.beuwi.simulator.platform.ui.window.IWindowView;
 import org.beuwi.simulator.utils.ResourceUtils;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.nio.file.FileSystems;
 import java.nio.file.Paths;
 import java.nio.file.StandardWatchEventKinds;
@@ -57,8 +58,7 @@ public class Launcher extends Application
 	}
 
 	@Override
-	public void start(Stage stage)
-	{
+	public void start(Stage stage) throws MalformedURLException {
 		try
 		{
 			// Text Anti Aliasing
@@ -98,7 +98,13 @@ public class Launcher extends Application
 
 					for (WatchEvent<?> event : events)
 					{
-						Platform.runLater(() -> RefreshBotsAction.update());
+						Platform.runLater(() -> {
+							try {
+								RefreshBotsAction.update();
+							} catch (MalformedURLException e) {
+								e.printStackTrace();
+							}
+						});
 					}
 
 					if (!WATCH_KEY.reset())
@@ -119,7 +125,7 @@ public class Launcher extends Application
 			Font.loadFont(ResourceUtils.getFont("Consola"),      0); // Family : "Consolas"
 			Font.loadFont(ResourceUtils.getFont("ConsolaBold"),  0); // Family :
 			Font.loadFont(ResourceUtils.getFont("D2Coding"),     0); // Family : "D2Coding"
-			Font.loadFont(ResourceUtils.getFont("D2codingBold"), 0); // Family : "D2Coding"
+			Font.loadFont(ResourceUtils.getFont("D2CodingBold"), 0); // Family : "D2Coding"
 			Font.loadFont(ResourceUtils.getFont("Roboto"), 	   0); // Family : "Roboto"
 			Font.loadFont(ResourceUtils.getFont("RobotoBold"),   0); // Family : "Roboto Bold"
 			Font.loadFont(ResourceUtils.getFont("RobotoMedium"), 0); // Family : "Roboto Medium"
@@ -160,24 +166,60 @@ public class Launcher extends Application
 				{
 					switch (event.getCode())
 					{
-						case N : new CreateBotDialog().display(); break;
-						case I : new ImportScriptDialog().display(); break;
+						case N :
+							try {
+								new CreateBotDialog().display();
+							} catch (MalformedURLException e) {
+								e.printStackTrace();
+							}
+							break;
+						case I :
+							try {
+								new ImportScriptDialog().display();
+							} catch (MalformedURLException e) {
+								e.printStackTrace();
+							}
+							break;
 					}
 
 					if (event.isAltDown())
 					{
 						switch (event.getCode())
 						{
-							case S : OpenSettingsTabAction.update(); break;
+							case S :
+								try {
+									OpenSettingsTabAction.update();
+								} catch (MalformedURLException e) {
+									e.printStackTrace();
+								}
+								break;
 						}
 					}
 				}
 
 				switch (event.getCode())
 				{
-					case F8 : OpenGlobalLogTabAction.update(); break;
-					case F9 : OpenDebugRoomTabAction.update(); break;
-					case F10 : ScriptManager.allInitialize(true); break;
+					case F8 :
+						try {
+							OpenGlobalLogTabAction.update();
+						} catch (MalformedURLException e) {
+							e.printStackTrace();
+						}
+						break;
+					case F9 :
+						try {
+							OpenDebugRoomTabAction.update();
+						} catch (MalformedURLException e) {
+							e.printStackTrace();
+						}
+						break;
+					case F10 :
+						try {
+							ScriptManager.allInitialize(true);
+						} catch (MalformedURLException e) {
+							e.printStackTrace();
+						}
+						break;
 				}
 
 				event.consume();
@@ -202,7 +244,7 @@ public class Launcher extends Application
 	@Override
 	public void stop()
 	{
-
+		System.exit(0);
 	}
 
 	public static void main(String[] args)

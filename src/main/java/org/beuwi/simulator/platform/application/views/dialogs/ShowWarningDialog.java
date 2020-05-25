@@ -8,20 +8,20 @@ import org.beuwi.simulator.platform.ui.dialog.IDialogBoxType.DOCUMENT;
 import org.beuwi.simulator.platform.ui.dialog.IDialogBoxView;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
+
 public class ShowWarningDialog extends IDialogBoxView
 {
 	@FXML private Label label;
 
 	private String text;
 
-	public ShowWarningDialog(String text)
-	{
+	public ShowWarningDialog(String text) {
 		super(DOCUMENT.WARNING);
 		this.text = text;
 	}
 
-	public void display()
-	{
+	public void display() {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(ResourceUtils.getForm("ShowWarningDialog"));
 		loader.setController(this);

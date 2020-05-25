@@ -8,6 +8,7 @@ import org.beuwi.simulator.platform.ui.editor.IEditorPane;
 import org.beuwi.simulator.platform.ui.editor.IEditorTab;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 public class AddEditorTabAction
@@ -19,18 +20,15 @@ public class AddEditorTabAction
 		pane = EditorAreaPart.getComponent();
 	}
 
-	public static void update(String title)
-	{
+	public static void update(String title) throws MalformedURLException {
 		update(title, null);
 	}
 
-	public static void update(String title, Node node)
-	{
+	public static void update(String title, Node node) throws MalformedURLException {
 		update(title, title, node);
 	}
 
-	public static void update(String id, String title, Node content)
-	{
+	public static void update(String id, String title, Node content) {
 		update(ResourceUtils.getImage("tab_default"), id, title, content);
 	}
 

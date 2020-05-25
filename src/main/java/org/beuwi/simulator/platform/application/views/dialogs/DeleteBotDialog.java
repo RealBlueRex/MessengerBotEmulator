@@ -11,6 +11,8 @@ import org.beuwi.simulator.platform.ui.dialog.IDialogBoxType.DOCUMENT;
 import org.beuwi.simulator.platform.ui.dialog.IDialogBoxView;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
+
 public class DeleteBotDialog extends IDialogBoxView
 {
 	@FXML private Label label;
@@ -20,14 +22,12 @@ public class DeleteBotDialog extends IDialogBoxView
 
 	private String name;
 
-	public DeleteBotDialog(String name)
-	{
+	public DeleteBotDialog(String name) throws MalformedURLException {
 		super(DOCUMENT.EVENT);
 		this.name = name;
 	}
 
-	public void display()
-	{
+	public void display() throws MalformedURLException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(ResourceUtils.getForm("DeleteBotDialog"));
 		loader.setController(this);
@@ -61,22 +61,29 @@ public class DeleteBotDialog extends IDialogBoxView
 
 		btnDelete.setOnAction(event ->
 		{
-			action();
+			try {
+				action();
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
 		});
 
 		setOnKeyPressed(event ->
 		{
 			if (event.getCode().equals(KeyCode.ENTER))
 			{
-				action();
+				try {
+					action();
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				}
 			}
 		});
 
 		label.setText("Delete bot '" + name + "'?");
 	}
 
-	private void action()
-	{
+	private void action() throws MalformedURLException {
 		DeleteBotAction.update(name); close();
 	}
 }

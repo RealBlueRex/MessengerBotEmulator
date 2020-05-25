@@ -5,6 +5,7 @@ import javafx.scene.control.SplitPane;
 import org.beuwi.simulator.platform.application.views.parts.EditorAreaPart;
 import org.beuwi.simulator.platform.ui.editor.IEditorPane;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 public class SaveAllEditorTabsAction
@@ -16,8 +17,7 @@ public class SaveAllEditorTabsAction
 		pane = EditorAreaPart.getComponent();
 	}
 
-	public static void update()
-	{
+	public static void update() throws MalformedURLException {
 		List<Node> nodes = pane.getItems();
 
 		for (Node node : nodes)

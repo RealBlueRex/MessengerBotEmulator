@@ -48,6 +48,7 @@ public class SettingsTab
 			ProgramTab.apply();
 			DebugTab.apply();
 			BotsTab.apply();
+			DeviceTab.apply();
 		});
 
 		btnRefresh.setOnAction(event ->
@@ -55,11 +56,13 @@ public class SettingsTab
 			ProgramTab.refresh();
 			DebugTab.refresh();
 			BotsTab.refresh();
+			DeviceTab.refresh();;
 		});
 
 		ProgramTab.initialize();
 		DebugTab.initialize();
 		BotsTab.initialize();
+		DeviceTab.initialize();
 	}
 
 	public static class ProgramTab
@@ -105,7 +108,11 @@ public class SettingsTab
 
 	public static class DebugTab
 	{
-		static Settings.Public data = Settings.getPublicSetting("debug");
+		static Settings.Public data;
+
+		static {
+			data = Settings.getPublicSetting("debug");
+		}
 
 		static TextField txfHtmlTime = (TextField) nameSpace.get("txfHtmlTime");
 
@@ -157,8 +164,7 @@ public class SettingsTab
 			refresh();
 		}
 
-		public static void apply()
-		{
+		public static void apply() {
 			HashMap<String, Object> map = new HashMap<>();
 
 			map.put("room", txfRoomName.getText());
@@ -203,7 +209,67 @@ public class SettingsTab
 			imgBotProfile.set(null);
 		}
 	}
+	public static class DeviceTab
+	{
+		static Settings.Public data;
 
+		static {
+			data = Settings.getPublicSetting("device");
+		}
+
+		static TextField txfAndroidVersionCode = (TextField) nameSpace.get("txfAndroidVersionCode");
+		static TextField txfAndroidVersionName = (TextField) nameSpace.get("txfAndroidVersionName");
+		static TextField txfPhoneBrand = (TextField) nameSpace.get("txfPhoneBrand");
+		static TextField txfPhoneModel = (TextField) nameSpace.get("txfPhoneModel");
+		static TextField txfPlugType = (TextField) nameSpace.get("txfPlugType");
+		static TextField txfBatteryLevel = (TextField) nameSpace.get("txfBatteryLevel");
+		static TextField txfBatteryHealth = (TextField) nameSpace.get("txfBatteryHealth");
+		static TextField txfBatteryTemperature = (TextField) nameSpace.get("txfBatteryTemperature");
+		static TextField txfBatteryVoltage = (TextField) nameSpace.get("txfBatteryVoltage");
+		static TextField txfBatteryStatus = (TextField) nameSpace.get("txfBatteryStatus");
+
+		static CheckBox chkIsCharging = (CheckBox) nameSpace.get("chkIsCharging");
+
+		public static void initialize()
+		{
+			refresh();
+		}
+
+		public static void apply() {
+			HashMap<String, Object> map = new HashMap<>();
+
+			map.put("androidVersionCode", txfAndroidVersionCode.getText());
+			map.put("androidVersionName", txfAndroidVersionName.getText());
+			map.put("phoneBrand", txfPhoneBrand.getText());
+			map.put("phoneModel", txfPhoneModel.getText());
+			map.put("plugType", txfPlugType.getText());
+			map.put("batteryLevel", Integer.valueOf(txfBatteryLevel.getText()));
+			map.put("batteryHealth", Integer.valueOf(txfBatteryHealth.getText()));
+			map.put("batteryTemperature", Integer.valueOf(txfBatteryTemperature.getText()));
+			map.put("batteryVoltage", Integer.valueOf(txfBatteryVoltage.getText()));
+			map.put("batteryStatus", Integer.valueOf(txfBatteryStatus.getText()));
+
+			map.put("isCharging", chkIsCharging.isSelected());
+
+			data.putMap(map);
+		}
+
+		public static void refresh()
+		{
+			txfAndroidVersionCode.setText(data.getString("androidVersionCode"));
+			txfAndroidVersionName.setText(data.getString("androidVersionName"));
+			txfPhoneBrand.setText(data.getString("plugType"));
+			txfPhoneModel.setText(data.getString("phoneModel"));
+			txfPlugType.setText(data.getString("plugType"));
+			txfBatteryLevel.setText(data.getString("batteryLevel"));
+			txfBatteryHealth.setText(data.getString("batteryHealth"));
+			txfBatteryTemperature.setText(data.getString("batteryTemperature"));
+			txfBatteryVoltage.setText(data.getString("batteryVoltage"));
+			txfBatteryStatus.setText(data.getString("batteryStatus"));
+
+			chkIsCharging.setSelected(data.getBoolean("isCharging"));
+		}
+	}
 	public static class BotsTab
 	{
 		public static void initialize()

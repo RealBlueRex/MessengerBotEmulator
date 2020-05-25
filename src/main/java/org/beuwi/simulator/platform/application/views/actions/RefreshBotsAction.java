@@ -8,6 +8,7 @@ import org.beuwi.simulator.platform.ui.components.IListView;
 import org.beuwi.simulator.platform.ui.components.ILogView;
 
 import java.io.File;
+import java.net.MalformedURLException;
 
 public class RefreshBotsAction
 {
@@ -18,8 +19,7 @@ public class RefreshBotsAction
         listView = ActiveAreaPart.BotsTab.getComponent();
     }
 
-    public static void update()
-    {
+    public static void update() throws MalformedURLException {
         listView.getItems().clear();
 
         BotManager.data.clear();

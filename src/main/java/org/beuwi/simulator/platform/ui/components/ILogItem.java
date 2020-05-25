@@ -7,6 +7,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import org.beuwi.simulator.utils.ResourceUtils;
 
+import java.net.MalformedURLException;
+
 import static org.beuwi.simulator.platform.ui.components.ILogType.DEBUG;
 import static org.beuwi.simulator.platform.ui.components.ILogType.ERROR;
 import static org.beuwi.simulator.platform.ui.components.ILogType.EVENT;
@@ -19,8 +21,7 @@ public class ILogItem extends AnchorPane
 
 	private IListView view;
 
-	public ILogItem(String text, String date, int type)
-	{
+	public ILogItem(String text, String date, int type) throws MalformedURLException {
 		String itemType = switch (type)
 		{
 			case ERROR -> "error";

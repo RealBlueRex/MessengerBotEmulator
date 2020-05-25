@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.net.MalformedURLException;
 
 public class FileManager
 {
@@ -66,8 +67,7 @@ public class FileManager
 		return new File(getBotFolder(name).getPath() + File.separator + "log.json");
 	}
 
-	public static String save(File file, String content)
-	{
+	public static String save(File file, String content) {
 		try
 		{
 			file.createNewFile();
@@ -94,8 +94,7 @@ public class FileManager
 		return null;
 	}
 
-	public static String append(File file, String content)
-	{
+	public static String append(File file, String content) throws MalformedURLException {
 		try
 		{
 			file.createNewFile();
@@ -114,8 +113,7 @@ public class FileManager
 		return null;
 	}
 
-	public static String read(File file)
-	{
+	public static String read(File file) {
 		try
 		{
 			if (!file.exists())
@@ -143,8 +141,7 @@ public class FileManager
 		return null;
 	}
 
-	public static boolean remove(File file)
-	{
+	public static boolean remove(File file) throws MalformedURLException {
 		try
 		{
 			if (!file.exists())

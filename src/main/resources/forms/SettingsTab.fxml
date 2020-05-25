@@ -134,6 +134,44 @@
                               </StackPane>
                            </content>
                         </Tab>
+                        <Tab text="Device">
+                           <content>
+                              <StackPane fx:id="stpDeviceTab">
+                                 <children>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <AnchorPane minHeight="800.0">
+                                             <children>
+                                                <Label layoutX="40.0" layoutY="40.0" styleClass="major-label" text="Device : Android Version Code(API level)" />
+                                                <ITextField fx:id="txfAndroidVersionCode" layoutX="40.0" layoutY="65.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="40.0" layoutY="110.0" styleClass="major-label" text="Device : Android Version Name(ex. 10)" />
+                                                <ITextField fx:id="txfAndroidVersionName" layoutX="40.0" layoutY="135.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="40.0" layoutY="180.0" styleClass="major-label" text="Device : Phone Brand" />
+                                                <ITextField fx:id="txfPhoneBrand" layoutX="40.0" layoutY="205.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="40.0" layoutY="250.0" styleClass="major-label" text="Device : Phone Model" />
+                                                <ITextField fx:id="txfPhoneModel" layoutX="40.0" layoutY="275.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="40.0" layoutY="320.0" styleClass="major-label" text="Device : Plug Type" />
+                                                <ITextField fx:id="txfPlugType" layoutX="40.0" layoutY="345.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="40.0" layoutY="390.0" styleClass="major-label" text="Device : Battery Level" />
+                                                <ITextField fx:id="txfBatteryLevel" layoutX="40.0" layoutY="415.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="40.0" layoutY="460.0" styleClass="major-label" text="Device : Battery Health" />
+                                                <ITextField fx:id="txfBatteryHealth" layoutX="40.0" layoutY="485.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="40.0" layoutY="530.0" styleClass="major-label" text="Device : Battery Temperature" />
+                                                <ITextField fx:id="txfBatteryTemperature" layoutX="40.0" layoutY="555.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="40.0" layoutY="600.0" styleClass="major-label" text="Device : Battery Voltage" />
+                                                <ITextField fx:id="txfBatteryVoltage" layoutX="40.0" layoutY="625.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="40.0" layoutY="670.0" styleClass="major-label" text="Device : Battery Status" />
+                                                <ITextField fx:id="txfBatteryStatus" layoutX="40.0" layoutY="695.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="40.0" layoutY="740.0" styleClass="major-label" text="Device : IsCharging" />
+                                                <ICheckBox fx:id="chkIsCharging" layoutX="40.0" layoutY="765.0" text="충전중 여부를 설정합니다." />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </StackPane>
+                           </content>
+                        </Tab>
                      </tabs>
                   </TabPane>
                   <AnchorPane>
