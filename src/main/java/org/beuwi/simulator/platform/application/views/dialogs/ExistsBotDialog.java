@@ -16,12 +16,12 @@ public class ExistsBotDialog extends IDialogBoxView
 
     private String name;
 
-    public ExistsBotDialog(String name) throws MalformedURLException {
+    public ExistsBotDialog(String name) {
         super(DOCUMENT.ERROR);
         this.name = name;
     }
 
-    public void display() throws MalformedURLException {
+    public void display() {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(ResourceUtils.getForm("ExistsBotDialog"));
         loader.setController(this);

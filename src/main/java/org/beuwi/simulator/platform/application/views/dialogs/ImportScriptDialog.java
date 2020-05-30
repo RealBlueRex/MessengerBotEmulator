@@ -31,11 +31,11 @@ public class ImportScriptDialog extends IDialogBoxView
 
 	private File file;
 
-	public ImportScriptDialog() throws MalformedURLException {
+	public ImportScriptDialog() {
 		super(IDialogBoxType.APPLICATION);
 	}
 
-	public void display() throws MalformedURLException {
+	public void display() {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(ResourceUtils.getForm("ImportScriptDialog"));
 		loader.setController(this);
@@ -85,11 +85,7 @@ public class ImportScriptDialog extends IDialogBoxView
 
 		btnImport.setOnAction(event ->
 		{
-			try {
-				action();
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
-			}
+			action();
 		});
 
 		txfScriptName.textProperty().addListener((observable, oldString, newString) ->
@@ -103,11 +99,7 @@ public class ImportScriptDialog extends IDialogBoxView
 			{
 				if (!btnImport.isDisable())
 				{
-					try {
-						action();
-					} catch (MalformedURLException e) {
-						e.printStackTrace();
-					}
+					action();
 				}
 			}
 		});
@@ -115,7 +107,7 @@ public class ImportScriptDialog extends IDialogBoxView
 		Platform.runLater(() -> btnScriptOpen.requestFocus());
 	}
 
-	private void action() throws MalformedURLException {
+	private void action() {
 		CreateBotAction.update
 		(
 			file.getName(),

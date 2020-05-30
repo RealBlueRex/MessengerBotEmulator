@@ -17,7 +17,7 @@ public class SaveAllEditorTabsAction
 		pane = EditorAreaPart.getComponent();
 	}
 
-	public static void update() throws MalformedURLException {
+	public static void update() {
 		List<Node> nodes = pane.getItems();
 
 		for (Node node : nodes)

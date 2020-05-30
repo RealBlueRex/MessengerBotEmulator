@@ -16,7 +16,7 @@ public class IJSONArray extends JSONArray
 		super();
 	}
 
-	public IJSONArray(File file) throws MalformedURLException {
+	public IJSONArray(File file) {
 		try
 		{
 			this.addAll((List) new JSONParser().parse(FileManager.read(file)));

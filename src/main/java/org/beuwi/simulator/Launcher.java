@@ -2,6 +2,7 @@ package org.beuwi.simulator;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
@@ -38,7 +39,6 @@ import org.beuwi.simulator.platform.ui.window.IWindowView;
 import org.beuwi.simulator.utils.ResourceUtils;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.nio.file.FileSystems;
 import java.nio.file.Paths;
 import java.nio.file.StandardWatchEventKinds;
@@ -49,7 +49,7 @@ import java.util.List;
 
 public class Launcher extends Application
 {
-	private WatchService WATCH_SERVICE = FileSystems.getDefault().newWatchService();
+	private final WatchService WATCH_SERVICE = FileSystems.getDefault().newWatchService();
 	private WatchKey     WATCH_KEY     = null;
 
 	public Launcher() throws IOException
@@ -58,7 +58,7 @@ public class Launcher extends Application
 	}
 
 	@Override
-	public void start(Stage stage) throws MalformedURLException {
+	public void start(Stage stage) {
 		try
 		{
 			// Text Anti Aliasing
@@ -96,15 +96,9 @@ public class Launcher extends Application
 
 					List<WatchEvent<?>> events = WATCH_KEY.pollEvents();
 
-					for (WatchEvent<?> event : events)
+					for (WatchEvent<?> ignored : events)
 					{
-						Platform.runLater(() -> {
-							try {
-								RefreshBotsAction.update();
-							} catch (MalformedURLException e) {
-								e.printStackTrace();
-							}
-						});
+						Platform.runLater(RefreshBotsAction::update);
 					}
 
 					if (!WATCH_KEY.reset())
@@ -159,67 +153,20 @@ public class Launcher extends Application
 			SaveAllEditorTabsAction.initialize();
 			SelectActivityTabAction.initialize();
 			SplitEditorPaneAction.initialize();
-
 			stage.addEventHandler(KeyEvent.KEY_PRESSED, event ->
 			{
 				if (event.isControlDown())
 				{
-					switch (event.getCode())
-					{
-						case N :
-							try {
-								new CreateBotDialog().display();
-							} catch (MalformedURLException e) {
-								e.printStackTrace();
-							}
-							break;
-						case I :
-							try {
-								new ImportScriptDialog().display();
-							} catch (MalformedURLException e) {
-								e.printStackTrace();
-							}
-							break;
-					}
-
-					if (event.isAltDown())
-					{
-						switch (event.getCode())
-						{
-							case S :
-								try {
-									OpenSettingsTabAction.update();
-								} catch (MalformedURLException e) {
-									e.printStackTrace();
-								}
-								break;
-						}
-					}
+					KeyCode KEY = event.getCode();
+					if(KEY == KeyCode.N) new CreateBotDialog().display();
+					else if(KEY == KeyCode.I) new ImportScriptDialog().display();
+					else if(event.isAltDown() && KEY == KeyCode.S) OpenSettingsTabAction.update();
 				}
 
-				switch (event.getCode())
-				{
-					case F8 :
-						try {
-							OpenGlobalLogTabAction.update();
-						} catch (MalformedURLException e) {
-							e.printStackTrace();
-						}
-						break;
-					case F9 :
-						try {
-							OpenDebugRoomTabAction.update();
-						} catch (MalformedURLException e) {
-							e.printStackTrace();
-						}
-						break;
-					case F10 :
-						try {
-							ScriptManager.allInitialize(true);
-						} catch (MalformedURLException e) {
-							e.printStackTrace();
-						}
-						break;
+				switch (event.getCode()) {
+					case F8 -> OpenGlobalLogTabAction.update();
+					case F9 -> OpenDebugRoomTabAction.update();
+					case F10 -> ScriptManager.allInitialize(true);
 				}
 
 				event.consume();
@@ -240,7 +187,6 @@ public class Launcher extends Application
 			new ShowErrorDialog(e).display();
 		}
 	}
-
 	@Override
 	public void stop()
 	{

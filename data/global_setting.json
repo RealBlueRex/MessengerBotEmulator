@@ -1,7 +1,7 @@
 {
 	"debug":{
 		"package":"com.kakao.talk",
-		"sender":"DEBUG SENDER",
+		"sender":"h!",
 		"bot":"DEBUG BOT",
 		"isGroupChat":true,
 		"room":"DEBUG ROOM",

@@ -1,6 +1,5 @@
 package org.beuwi.simulator.platform.ui.skins;
 
-import com.sun.javafx.util.Utils;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.NumberBinding;
 import javafx.geometry.Orientation;
@@ -52,7 +51,7 @@ public class IScrollBarSkin implements Skin<ScrollBar>
 						if (getSkinnable().getMax() > getSkinnable().getMin())
 						{
 							dragStart = localToParent(event.getX(), event.getY());
-							double value = Utils.clamp(getSkinnable().getMin(), getSkinnable().getValue(), getSkinnable().getMax());
+							double value = Math.max(getSkinnable().getMin(), Math.min(getSkinnable().getValue(), getSkinnable().getMax()));
 							dragPos = (value - getSkinnable().getMin()) / (getSkinnable().getMax() - getSkinnable().getMin());
 
 							event.consume();

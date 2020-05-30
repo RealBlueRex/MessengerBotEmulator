@@ -15,11 +15,11 @@ public class ILogView extends IListView
 	}
 
 	// 인자 없으면 Global Log
-	public ILogView() throws MalformedURLException {
+	public ILogView() {
 		this(null);
 	}
 
-	public ILogView(String name) throws MalformedURLException {
+	public ILogView(String name) {
 		if (name != null)
 		{
 			setItems(LogManager.load(name));

@@ -19,7 +19,7 @@ public class RefreshBotsAction
         listView = ActiveAreaPart.BotsTab.getComponent();
     }
 
-    public static void update() throws MalformedURLException {
+    public static void update() {
         listView.getItems().clear();
 
         BotManager.data.clear();

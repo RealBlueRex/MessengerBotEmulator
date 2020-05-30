@@ -7,6 +7,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -15,6 +16,7 @@ import javafx.scene.shape.Circle;
 import org.beuwi.simulator.compiler.engine.ScriptManager;
 import org.beuwi.simulator.managers.FileManager;
 import org.beuwi.simulator.platform.application.views.tabs.DebugRoomTab;
+import org.beuwi.simulator.platform.ui.chat.IChatViewAllContents;
 import org.beuwi.simulator.platform.ui.components.IContextMenu;
 import org.beuwi.simulator.platform.ui.components.IListView;
 import org.beuwi.simulator.platform.ui.components.IMenuItem;
@@ -44,24 +46,16 @@ public class AddChatMessageAction
 		HBox cell = new HBox(pane);
 		HBox item = new HBox();
 		String finalMessage = message;
-		cell.setOnMouseClicked(event -> {
-			if(finalMessage.length() < 500) {
-				return;
-			}
-			JPanel panel=new JPanel();
-			JScrollPane scrollBar=new JScrollPane(panel,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-			JLabel viewall = new JLabel(finalMessage);
-			JFrame frame=new JFrame("전체보기");
-			panel.add(viewall);
-			frame.add(scrollBar);
-			frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-			frame.setSize(400,400);
-			frame.setVisible(true);
-		});
 		if(message.length() >= 500)
 			message = message.substring(0, 500 - 1) + "...";
 
 		Label chat = new Label(message);
+		cell.setOnMouseClicked(event -> {
+			if(finalMessage.length() < 500 || event.getButton() != MouseButton.PRIMARY) {
+				return;
+			}
+			new ShowChatViewAllContents(finalMessage).display();
+		});
 		chat.setText(message);
 		chat.setMaxWidth(220);
 		chat.setWrapText(true);

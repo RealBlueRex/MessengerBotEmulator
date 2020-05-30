@@ -15,7 +15,7 @@ public class OpenGlobalLogTabAction
 		listView = GlobalLogTab.getComponent();
 	}
 
-	public static void update() throws MalformedURLException {
+	public static void update() {
 		AddEditorTabAction.update("@global::log", "Global Log", listView);
 	}
 }

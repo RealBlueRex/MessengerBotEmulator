@@ -10,15 +10,15 @@ import java.util.List;
 
 public class SaveEditorTabAction
 {
-	public static void update() throws MalformedURLException {
+	public static void update() {
 		update(EditorAreaPart.getSelectedPane().getSelectedTab());
 	}
 
-	public static void update(String name) throws MalformedURLException {
+	public static void update(String name) {
 		update(EditorAreaPart.getSelectedPane().getTabItem("@script::" + name));
 	}
 
-	public static void update(ITab tab) throws MalformedURLException {
+	public static void update(ITab tab) {
 		if (tab != null)
 		{
 			if (tab.getType().equals("script"))
@@ -28,7 +28,7 @@ public class SaveEditorTabAction
 		}
 	}
 
-	public static void update(List<ITab> tabs) throws MalformedURLException {
+	public static void update(List<ITab> tabs) {
 		for (ITab tab : tabs)
 		{
 			if (tab.getType().equals("script"))

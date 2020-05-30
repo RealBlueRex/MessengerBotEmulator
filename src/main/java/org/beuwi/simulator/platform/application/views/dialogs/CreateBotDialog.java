@@ -24,11 +24,11 @@ public class CreateBotDialog extends IDialogBoxView
 	private Button btnCreate;
 	private Button btnCancel;
 
-	public CreateBotDialog() throws MalformedURLException {
+	public CreateBotDialog() {
 		super(IDialogBoxType.APPLICATION);
 	}
 
-	public void display() throws MalformedURLException {
+	public void display() {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(ResourceUtils.getForm("CreateBotDialog"));
 		loader.setController(this);
@@ -62,11 +62,7 @@ public class CreateBotDialog extends IDialogBoxView
 
 		btnCreate.setOnAction(event ->
 		{
-			try {
-				action();
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
-			}
+			action();
 		});
 
 		txfScriptName.textProperty().addListener((observable, oldString, newString) ->
@@ -80,11 +76,7 @@ public class CreateBotDialog extends IDialogBoxView
 			{
 				if (!btnCreate.isDisable())
 				{
-					try {
-						action();
-					} catch (MalformedURLException e) {
-						e.printStackTrace();
-					}
+					action();
 				}
 			}
 		});
@@ -92,7 +84,7 @@ public class CreateBotDialog extends IDialogBoxView
 		Platform.runLater(() -> txfScriptName.requestFocus());
 	}
 
-	private void action() throws MalformedURLException {
+	private void action() {
 		CreateBotAction.update
 		(
 		    txfScriptName.getText(),

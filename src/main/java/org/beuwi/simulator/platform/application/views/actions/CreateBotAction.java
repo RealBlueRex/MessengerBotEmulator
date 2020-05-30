@@ -8,7 +8,7 @@ import java.net.MalformedURLException;
 
 public class CreateBotAction
 {
-	public static void update(String name, String content, boolean isImport, boolean isUnified, boolean isOffError) throws MalformedURLException {
+	public static void update(String name, String content, boolean isImport, boolean isUnified, boolean isOffError) {
 		File project = FileManager.getBotFolder(name);
 
 		if (project.exists())

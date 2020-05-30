@@ -16,7 +16,7 @@ public class OpenDebugRoomTabAction
 		pane = DebugRoomTab.getRoot();
 	}
 
-	public static void update() throws MalformedURLException {
+	public static void update() {
 		AddEditorTabAction.update
 		(
 			ResourceUtils.getImage("tab_debug"),

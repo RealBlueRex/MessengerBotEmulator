@@ -146,49 +146,25 @@ public class IWindowView extends StackPane
 		btnFileMenu.setMenus
 		(
 			new IMenuItem("New Bot", "Ctrl + N", event -> {
-				try {
-					new CreateBotDialog().display();
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				new CreateBotDialog().display();
 			}),
 			new IMenuItem("Import Script", "Ctrl + I", event -> {
-				try {
-					new ImportScriptDialog().display();
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				new ImportScriptDialog().display();
 			}),
 			new SeparatorMenuItem(),
 			new IMenuItem("Save", "Ctrl + S", event -> {
-				try {
-					SaveEditorTabAction.update();
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				SaveEditorTabAction.update();
 			}),
 			new IMenuItem("Save All", event -> {
-				try {
-					SaveAllEditorTabsAction.update();
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				SaveAllEditorTabsAction.update();
 			}),
 			new SeparatorMenuItem(),
 			new IMenuItem("Refresh All Bots", "Ctrl + Alt + Y", event -> {
-				try {
-					RefreshBotsAction.update();
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				RefreshBotsAction.update();
 			}),
 			new SeparatorMenuItem(),
 			new IMenuItem("Settings", "Ctrl + Alt + S", event -> {
-				try {
-					OpenSettingsTabAction.update();
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				OpenSettingsTabAction.update();
 			})
 		);
 
@@ -207,18 +183,10 @@ public class IWindowView extends StackPane
 		btnDebugMenu.setMenus
 		(
 			new IMenuItem("Show Global Log", "F8", event -> {
-				try {
-					OpenGlobalLogTabAction.update();
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				OpenGlobalLogTabAction.update();
 			}),
 			new IMenuItem("Open Debug Room", "F9", event -> {
-				try {
-					OpenDebugRoomTabAction.update();
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				OpenDebugRoomTabAction.update();
 			})
 		);
 	}

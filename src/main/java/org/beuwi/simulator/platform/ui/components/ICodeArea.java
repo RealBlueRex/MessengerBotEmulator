@@ -108,11 +108,7 @@ public class ICodeArea extends StackPane
 				switch (event.getCode())
 				{
 					case S :
-						try {
-							SaveEditorTabAction.update();
-						} catch (MalformedURLException e) {
-							e.printStackTrace();
-						}
+						SaveEditorTabAction.update();
 						break;
 				}
 			}

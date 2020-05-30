@@ -20,18 +20,18 @@ public class ScriptManager extends ScriptEngine
 		run(room, message, sender, isGroupChat, new ImageDB(), packageName);
 	}
 
-	public static boolean setInitialize(String name, boolean isManual, boolean ignoreError) throws MalformedURLException {
+	public static boolean setInitialize(String name, boolean isManual, boolean ignoreError) {
 		return initialize(name, isManual, ignoreError);
 	}
 
-	public static void allInitialize(boolean isManual) throws MalformedURLException {
+	public static void allInitialize(boolean isManual) {
 		for (String name : FileManager.getBotNames())
 		{
 			initialize(name, isManual, true);
 		}
 	}
 
-	public static void preInitialize() throws MalformedURLException {
+	public static void preInitialize() {
 		if (!Settings.getPublicSetting("program").getBoolean("autoCompile"))
 		{
 			return ;

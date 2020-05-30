@@ -20,11 +20,11 @@ public class AddEditorTabAction
 		pane = EditorAreaPart.getComponent();
 	}
 
-	public static void update(String title) throws MalformedURLException {
+	public static void update(String title) {
 		update(title, null);
 	}
 
-	public static void update(String title, Node node) throws MalformedURLException {
+	public static void update(String title, Node node) {
 		update(title, title, node);
 	}
 

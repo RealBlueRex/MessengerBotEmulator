@@ -14,7 +14,7 @@ public class OpenSettingsTabAction
 		pane = SettingsTab.getRoot();
 	}
 
-	public static void update() throws MalformedURLException {
+	public static void update() {
 		AddEditorTabAction.update("@global::settings", "Settings", pane);
 	}
 }

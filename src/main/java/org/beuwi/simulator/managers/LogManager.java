@@ -26,15 +26,15 @@ public class LogManager
 	}
 
 	// Global Log
-	public static List<ILogItem> load() throws MalformedURLException {
+	public static List<ILogItem> load() {
 		return load(FileManager.getDataFile("global_log.json"));
 	}
 
-	public static List<ILogItem> load(String name) throws MalformedURLException {
+	public static List<ILogItem> load(String name) {
 		return load(FileManager.getBotLog(name));
 	}
 
-	public static List<ILogItem> load(File file) throws MalformedURLException {
+	public static List<ILogItem> load(File file) {
 		try
 		{
 			if (!file.exists())
@@ -72,7 +72,7 @@ public class LogManager
 	}
 
 	// Global Log
-	public static void append(String data, int type) throws MalformedURLException {
+	public static void append(String data, int type) {
 		String date = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date());
 
 		append(FileManager.getDataFile("global_log.json"), data, date, type);
@@ -80,7 +80,7 @@ public class LogManager
 		AddBotLogItemAction.update(new ILogItem(data, date, type));
 	}
 
-	public static void append(String name, String data, int type) throws MalformedURLException {
+	public static void append(String name, String data, int type) {
 		String date = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date());
 
 		append(FileManager.getBotLog(name), data, date, type);
@@ -88,7 +88,7 @@ public class LogManager
 		AddBotLogItemAction.update(name, new ILogItem(data, date, type));
 	}
 
-	public static void append(File file, String data, String date, int type) throws MalformedURLException {
+	public static void append(File file, String data, String date, int type) {
 		JSONObject object = new JSONObject();
 
 		object.put("a", data);
@@ -103,15 +103,15 @@ public class LogManager
 	}
 
 	// Global
-	public static void clear() throws MalformedURLException {
+	public static void clear() {
 		clear(FileManager.getDataFile("global_log.json"));
 	}
 
-	public static void clear(String name) throws MalformedURLException {
+	public static void clear(String name) {
 		clear(FileManager.getBotLog(name));
 	}
 
-	public static void clear(File file) throws MalformedURLException {
+	public static void clear(File file) {
 		FileManager.save(file, "[]");
 	}
 }

@@ -30,7 +30,7 @@ public class FileStream extends ScriptableObject
 	{
 		try
 		{
-			File file = new File(path);
+			File file = new File("System_Root/"+path);
 
 			if (!file.exists())
 			{
@@ -63,7 +63,7 @@ public class FileStream extends ScriptableObject
 	{
 		try
 		{
-			File file = new File(path);
+			File file = new File("System_Root/"+path);
 
 			file.getParentFile().mkdirs();
 			file.createNewFile();
@@ -87,7 +87,7 @@ public class FileStream extends ScriptableObject
 	{
 		try
 		{
-			File file = new File(path);
+			File file = new File("System_Root/"+path);
 
 			file.getParentFile().mkdirs();
 			file.createNewFile();
@@ -111,7 +111,7 @@ public class FileStream extends ScriptableObject
 	{
     	try
     	{
-			File file = new File(path);
+			File file = new File("System_Root/"+path);
 
 			if (!file.exists())
 			{

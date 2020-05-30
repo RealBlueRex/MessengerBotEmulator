@@ -95,7 +95,7 @@ public class ActiveAreaPart
 
 	public static class DebugTab
 	{
-		public static void initialize() throws MalformedURLException {
+		public static void initialize() {
 			ToggleButton toggle = (ToggleButton) nameSpace.get("tgnDebugTab");
 
 			toggle.setOnMouseClicked(event ->
@@ -118,33 +118,21 @@ public class ActiveAreaPart
 
 			btnReloadAllBots.setOnAction(event ->
 			{
-				try {
-					ScriptManager.allInitialize(true);
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				ScriptManager.allInitialize(true);
 			});
 
 			btnOpenChatRoom.setOnAction(event ->
 			{
-				try {
-					OpenDebugRoomTabAction.update();
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				OpenDebugRoomTabAction.update();
 			});
 
 			btnShowGlobalLog.setOnAction(event ->
 			{
-				try {
-					OpenGlobalLogTabAction.update();
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				OpenGlobalLogTabAction.update();
 			});
 		}
 
-		private static void initOptionPane() throws MalformedURLException {
+		private static void initOptionPane() {
 			ITextField txfRoomName    = (ITextField) nameSpace.get("txfRoomName");
 			ITextField txfSenderName  = (ITextField) nameSpace.get("txfSenderName");
 			ITextField txfBotName     = (ITextField) nameSpace.get("txfBotName");

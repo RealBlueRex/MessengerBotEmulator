@@ -14,7 +14,7 @@ public class Settings
 		return new Public(type);
 	}
 
-	public static Script getScriptSetting(String name) throws MalformedURLException {
+	public static Script getScriptSetting(String name) {
 		return new Script(name);
 	}
 
@@ -73,7 +73,7 @@ public class Settings
 	{
 		private File file;
 
-		public Script(String name) throws MalformedURLException {
+		public Script(String name) {
 			try
 			{
 				file = FileManager.getBotSetting(name);
@@ -86,23 +86,23 @@ public class Settings
 			}
 		}
 
-		public void putString(String type, String data) throws MalformedURLException {
+		public void putString(String type, String data) {
 			put(type, data); apply();
 		}
 
-		public void putInt(String type, int data) throws MalformedURLException {
+		public void putInt(String type, int data) {
 			put(type, data); apply();
 		}
 
-		public void putBoolean(String type, boolean data) throws MalformedURLException {
+		public void putBoolean(String type, boolean data) {
 			put(type, data); apply();
 		}
 
-		public void putMap(Map map) throws MalformedURLException {
+		public void putMap(Map map) {
 			putAll(map); apply();
 		}
 
-		private void apply() throws MalformedURLException {
+		private void apply() {
 			FileManager.save(file, toBeautifyString());
 		}
 	}

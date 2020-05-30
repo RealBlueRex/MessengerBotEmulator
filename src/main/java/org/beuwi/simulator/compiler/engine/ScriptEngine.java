@@ -1,30 +1,21 @@
 package org.beuwi.simulator.compiler.engine;
 
 import javafx.application.Platform;
-import org.beuwi.simulator.compiler.api.Api;
-import org.beuwi.simulator.compiler.api.AppData;
-import org.beuwi.simulator.compiler.api.Bridge;
-import org.beuwi.simulator.compiler.api.DataBase;
-import org.beuwi.simulator.compiler.api.Device;
-import org.beuwi.simulator.compiler.api.FileStream;
-import org.beuwi.simulator.compiler.api.ImageDB;
-import org.beuwi.simulator.compiler.api.Log;
-import org.beuwi.simulator.compiler.api.Replier;
-import org.beuwi.simulator.compiler.api.Utils;
+import org.beuwi.simulator.compiler.api.*;
 import org.beuwi.simulator.managers.BotManager;
 import org.beuwi.simulator.managers.FileManager;
 import org.beuwi.simulator.managers.LogManager;
 import org.beuwi.simulator.platform.application.views.actions.SaveEditorTabAction;
 import org.beuwi.simulator.platform.ui.components.ILogType;
 import org.beuwi.simulator.settings.Settings;
-import org.mozilla.javascript.Context;
-import org.mozilla.javascript.Function;
-import org.mozilla.javascript.ImporterTopLevel;
-import org.mozilla.javascript.Script;
-import org.mozilla.javascript.ScriptableObject;
+import org.mozilla.javascript.*;
+import org.mozilla.javascript.commonjs.module.Require;
+import org.mozilla.javascript.tools.shell.Global;
 
 import java.io.File;
-import java.net.MalformedURLException;
+import java.io.FileReader;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.HashMap;
 
 public class ScriptEngine
@@ -47,16 +38,12 @@ public class ScriptEngine
 			}
 
 			Platform.runLater(() -> {
-				try {
-					callResponder(name, room, message, sender, isGroupChat, imageDB, packageName);
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				callResponder(name, room, message, sender, isGroupChat, imageDB, packageName);
 			});
 		}
 	}
 
-	public static boolean initialize(String name, boolean isManual, boolean ignoreError) throws MalformedURLException {
+	public static boolean initialize(String name, boolean isManual, boolean ignoreError) {
 		LogManager.append("컴파일 시작 : " + name, ILogType.EVENT);
 
 		compiling.put(name, true);
@@ -67,7 +54,7 @@ public class ScriptEngine
 		{
 			SaveEditorTabAction.update(name);
 		}
-
+		final require browserSupport = new require();
 		int optimization = Settings.getScriptSetting(name).getInt("optimization");
 
 		Context parseContext = null;
@@ -104,11 +91,14 @@ public class ScriptEngine
 				}
 			}
 
-			scope = (ScriptableObject) parseContext.initStandardObjects(new ImporterTopLevel(parseContext));
-			script = parseContext.compileString(FileManager.read(file), file.getName(), 0, null);
-
 			int flags = ScriptableObject.EMPTY;
-
+			scope = (ScriptableObject) parseContext.initStandardObjects(browserSupport, true);
+			script = parseContext.compileString(FileManager.read(file), file.getName(), 0, null);
+			String[] names = { "print", "load" };
+			scope.defineFunctionProperties(names, scope.getClass(), ScriptableObject.DONTENUM);
+			Scriptable argsObj = parseContext.newArray(scope, new Object[] {});
+			scope.defineProperty("arguments", argsObj, ScriptableObject.DONTENUM);
+			parseContext.evaluateReader(scope, new FileReader("./r.js"), "require", 1, null);
 			ScriptableObject.defineProperty(scope, "Api", ScriptUtils.convert(new Api(scope, name)), flags);
 			ScriptableObject.defineProperty(scope, "Device", ScriptUtils.convert(new Device(scope)), flags);
 			ScriptableObject.defineProperty(scope, "Log", ScriptUtils.convert(new Log(scope, name)), flags);
@@ -122,7 +112,6 @@ public class ScriptEngine
 			execScope = scope;
 
 			script.exec(parseContext, scope);
-
 			Function onStartCompile = scope.has("onStartCompile", scope) ? (Function) scope.get("onStartCompile", scope) : null;
 			Function responder = scope.has("response", scope) ? (Function) scope.get("response", scope) : null;
 
@@ -167,8 +156,7 @@ public class ScriptEngine
 
 		return true;
 	}
-
-	public static void callResponder(String name, String room, String message, String sender, Boolean isGroupChat, ImageDB imageDB, String packageName) throws MalformedURLException {
+	public static void callResponder(String name, String room, String message, String sender, Boolean isGroupChat, ImageDB imageDB, String packageName) {
 		ScriptableObject scope = container.get(name).getExecScope();
 		Function responder = container.get(name).getResponder();
 

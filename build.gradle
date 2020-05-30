@@ -20,7 +20,7 @@ repositories {
 }
 
 group "org.beuwi.simulator"
-version '0.5.0'
+version '0.6.8'
 
 javafx {
 	version = '14'
@@ -40,6 +40,8 @@ dependencies {
 	implementation group: 'com.jfoenix', name: 'jfoenix', version: '9.0.8'
 
 	implementation group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.10.4'
+
+	compile group:'org.xerial', name:'sqlite-jdbc', version:'3.8.11.2'
 
 	// error: module org.beuwi.simulator reads package org.hamcrest from both hamcrest.core and junit open
 	implementation (group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1') {
@@ -87,15 +89,13 @@ jlink {
 		]
 	}
 }
-
-/* jar {
+jar {
 	manifest {
-		attributes 'Main-Class': 'org.beuwi.simulator.Launcher'
+		attributes 'Main-Class': mainClassName
 	}
-
 	from {
 		configurations.compile.collect {
 			it.isDirectory() ? it : zipTree(it)
 		}
 	}
-} */
+}

@@ -35,15 +35,11 @@ public class AddExplorerBotAction
 		listView = ActiveAreaPart.BotsTab.getComponent();
 	}
 
-	public static void update(String name) throws MalformedURLException {
+	public static void update(String name) {
 		IContextMenu menu = new IContextMenu
 		(
 			new IMenuItem("Compile", event -> {
-				try {
-					ScriptManager.setInitialize(name, true, false);
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				ScriptManager.setInitialize(name, true, false);
 			}),
 			new IMenuItem("Power On / Off", event -> BotManager.setPower(name, !BotManager.getPower(name))),
 			new SeparatorMenuItem(),
@@ -112,11 +108,7 @@ public class AddExplorerBotAction
 		{
 			if (MouseButton.PRIMARY.equals(event.getButton()))
 			{
-				try {
-					ScriptManager.setInitialize(name, true, false);
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				}
+				ScriptManager.setInitialize(name, true, false);
 			}
 		});
 
@@ -129,11 +121,7 @@ public class AddExplorerBotAction
 		power.setSelected(setting.getBoolean("power"));
 		power.selectedProperty().addListener((observable, oldValue, newValue) ->
 		{
-			try {
-				setting.putBoolean("power", newValue);
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
-			}
+			setting.putBoolean("power", newValue);
 		});
 
 		listView.getItems().add(item);

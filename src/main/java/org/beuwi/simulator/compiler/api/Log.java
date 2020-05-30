@@ -31,37 +31,37 @@ public class Log extends ScriptableObject
 	}
 
 	@JSFunction
-	public void d(String data, Boolean showToast) throws MalformedURLException {
+	public void d(String data, Boolean showToast) {
 		debug(data, showToast);
 	}
 
 	@JSFunction
-	public void e(String data, Boolean showToast) throws MalformedURLException {
+	public void e(String data, Boolean showToast) {
 		error(data, showToast);
 	}
 
 	@JSFunction
-	public void i(String data, Boolean showToast) throws MalformedURLException {
+	public void i(String data, Boolean showToast) {
 		info(data, showToast);
 	}
 
 	@JSFunction
-	public void debug(String data, Boolean showToast) throws MalformedURLException {
+	public void debug(String data, Boolean showToast) {
 		LogManager.append(name, data, ILogType.DEBUG);
 	}
 
 	@JSFunction
-	public void error(String data, Boolean showToast) throws MalformedURLException {
+	public void error(String data, Boolean showToast) {
 		LogManager.append(name, data, ILogType.ERROR);
 	}
 
 	@JSFunction
-	public void info(String data, Boolean showToast) throws MalformedURLException {
+	public void info(String data, Boolean showToast) {
 		LogManager.append(name, data, ILogType.EVENT);
 	}
 
 	@JSFunction
-	public void clear() throws MalformedURLException {
+	public void clear() {
 		LogManager.clear(name);
 	}
 }

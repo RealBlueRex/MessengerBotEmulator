@@ -21,7 +21,7 @@ public class ILogItem extends AnchorPane
 
 	private IListView view;
 
-	public ILogItem(String text, String date, int type) throws MalformedURLException {
+	public ILogItem(String text, String date, int type) {
 		String itemType = switch (type)
 		{
 			case ERROR -> "error";

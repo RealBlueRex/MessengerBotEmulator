@@ -150,7 +150,7 @@ public class Api extends ScriptableObject
 	}
 	
 	@JSFunction
-	public Boolean isOn(String name) throws MalformedURLException {
+	public Boolean isOn(String name) {
 		return Settings.getScriptSetting(name).getBoolean("power");
 	}
 
@@ -199,8 +199,8 @@ public class Api extends ScriptableObject
 	}
 
 	@JSFunction
-	public Boolean replyRoom(String room, String message, Boolean hideToast) throws MalformedURLException {
-		AddChatMessageAction.update(message, false);
+	public Boolean replyRoom(String room, String message, Boolean hideToast) {
+		AddChatMessageAction.update(message, true);
 
 		return true;
 	}
