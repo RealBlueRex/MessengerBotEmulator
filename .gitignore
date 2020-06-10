@@ -1,2 +1,3 @@
-bots/*
-bots\*
+bots
+bots/TEST/bot.json
+bots/TEST/log.json
