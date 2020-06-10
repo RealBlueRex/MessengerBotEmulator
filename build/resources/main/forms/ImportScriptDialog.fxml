@@ -2,9 +2,9 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import org.beuwi.simulator.platform.ui.components.IButton?>
-<?import org.beuwi.simulator.platform.ui.components.ICheckBox?>
-<?import org.beuwi.simulator.platform.ui.components.ITextField?>
+<?import org.hui1601.emulator.platform.ui.components.IButton?>
+<?import org.hui1601.emulator.platform.ui.components.ICheckBox?>
+<?import org.hui1601.emulator.platform.ui.components.ITextField?>
 
 <AnchorPane minHeight="250.0" minWidth="550.0" prefHeight="250.0" prefWidth="600.0" styleClass="import-dialog" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
    <children>

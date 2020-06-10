@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import org.beuwi.simulator.platform.ui.components.IButton?>
+<?import IButton?>
 
 <BorderPane fx:id="bopRootPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
    <bottom>

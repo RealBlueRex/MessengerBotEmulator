@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import org.beuwi.simulator.platform.ui.components.IMenuButton?>
+<?import org.hui1601.emulator.platform.ui.components.IMenuButton?>
 
 <BorderPane fx:id="brpRootPane" prefHeight="400.0" prefWidth="600.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
@@ -24,6 +24,7 @@
                   <IMenuButton fx:id="btnEditMenu" mnemonicParsing="false" prefHeight="28.0" prefWidth="42.0" text="Edit" />
                   <IMenuButton fx:id="btnViewMenu" mnemonicParsing="false" prefHeight="28.0" prefWidth="42.0" text="View" />
                   <IMenuButton fx:id="btnDebugMenu" mnemonicParsing="false" prefHeight="28.0" prefWidth="52.0" text="Debug" />
+                  <IMenuButton fx:id="btnHelpMenu" mnemonicParsing="false" prefHeight="28.0" prefWidth="52.0" text="Help" />
                </children>
             </HBox>
             <HBox fx:id="hbxButtonBar" styleClass="button-bar" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -33,7 +34,7 @@
                   <Button fx:id="btnClose" mnemonicParsing="false" prefHeight="28.0" prefWidth="45.0" styleClass="close-button" />
                </children>
             </HBox>
-            <Label fx:id="lblWinTitle" layoutX="367.0" layoutY="3.0" text="Messenger Bot Simulator" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="0.0" />
+            <Label fx:id="lblWinTitle" layoutX="367.0" layoutY="3.0" text="Messenger Bot Emulator" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
    </top>

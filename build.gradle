@@ -12,15 +12,15 @@ java {
 }
 
 application {
-	mainClassName = "$moduleName/org.beuwi.simulator.Launcher"
+	mainClassName = "$moduleName/org.hui1601.emulator.Launcher"
 }
 
 repositories {
 	mavenCentral()
 }
 
-group "org.beuwi.simulator"
-version '0.6.8'
+group "org.hui1601.emulator"
+version '0.9.2'//org.hui1601.emulator.platform.ui.window.IWindowView 179번 줄도 수정
 
 javafx {
 	version = '14'
@@ -41,9 +41,7 @@ dependencies {
 
 	implementation group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.10.4'
 
-	compile group:'org.xerial', name:'sqlite-jdbc', version:'3.8.11.2'
-
-	// error: module org.beuwi.simulator reads package org.hamcrest from both hamcrest.core and junit open
+	// error: module org.hui1601.emulator reads package org.hamcrest from both hamcrest.core and junit open
 	implementation (group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1') {
 		exclude group: 'org.hamcrest', module: 'hamcrest-core'
 	}
@@ -67,7 +65,7 @@ jlink {
 	options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
 
 	launcher {
-		name = 'Simulator'
+		name = 'Emulator'
 	}
 
 	// Instructs the plugin to include all dependencies matching the given prefixes into the merged module. This method is useful when the plugin should handle one or more modular jars as non-modular
@@ -84,8 +82,8 @@ jlink {
 		imageOptions += ['--icon', 'src/main/resources/icons/program.ico']
 
 		installerOptions = [
-				'--vendor', 'Beuwi',
-				'--app-version', '0.5.0',
+				'--vendor', 'hui1601',
+				'--app-version', version,
 		]
 	}
 }

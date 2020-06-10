@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane stylesheets="@../styles/ShowAboutDialog.css" minHeight="200.0" minWidth="400.0" prefHeight="200.0" prefWidth="400.0" styleClass="about" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <Text fx:id="contents" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" styleClass="contents"/>
+</AnchorPane>

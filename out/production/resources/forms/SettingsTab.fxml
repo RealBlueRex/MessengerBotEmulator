@@ -15,10 +15,10 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import org.beuwi.simulator.platform.ui.components.IButton?>
-<?import org.beuwi.simulator.platform.ui.components.ICheckBox?>
-<?import org.beuwi.simulator.platform.ui.components.ICodeArea?>
-<?import org.beuwi.simulator.platform.ui.components.ITextField?>
+<?import org.hui1601.emulator.platform.ui.components.IButton?>
+<?import org.hui1601.emulator.platform.ui.components.ICheckBox?>
+<?import org.hui1601.emulator.platform.ui.components.ICodeArea?>
+<?import org.hui1601.emulator.platform.ui.components.ITextField?>
 
 <StackPane prefHeight="800.0" prefWidth="1000.0" stylesheets="@../styles/SettingsTab.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>

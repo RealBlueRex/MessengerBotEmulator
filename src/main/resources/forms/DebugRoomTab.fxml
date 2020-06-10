@@ -3,9 +3,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.*?>
-<?import org.beuwi.simulator.platform.ui.components.ITextArea?>
+<?import org.hui1601.emulator.platform.ui.components.ITextArea?>
 
-<?import org.beuwi.simulator.platform.ui.components.IListView?>
+<?import org.hui1601.emulator.platform.ui.components.IListView?>
 <VBox alignment="CENTER" cacheShape="false" centerShape="false" minWidth="350.0" prefHeight="800.0" prefWidth="1000.0" scaleShape="false" stylesheets="@../styles/DebugRoomTab.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
    <children>
       <IListView fx:id="listView" VBox.vgrow="ALWAYS">

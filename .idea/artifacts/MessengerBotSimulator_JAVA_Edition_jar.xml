@@ -2,7 +2,6 @@
   <artifact type="jar" name="MessengerBotSimulator-JAVA-Edition:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/MessengerBotSimulator_JAVA_Edition_jar</output-path>
     <root id="archive" name="MessengerBotSimulator-JAVA-Edition.jar">
-      <element id="module-output" name="msgbots.main" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/14/f0f836ec9d1dd5ce0f3776cd2a87949e5191e085/javafx-controls-14-win.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.10/e4f1766ce7404a08f45d859fb9c226fc9e41a861/junit-4.10.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.fxmisc.richtext/richtextfx/0.10.4/536c252f5dcecf55703ae778209eff559a4cea79/richtextfx-0.10.4.jar" path-in-jar="/" />
@@ -25,6 +24,7 @@
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-swing/14/3a4621195292f0a685c4bb2c0172d30b0a42e694/javafx-swing-14-win.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.13.1/f9577f3732bb7caa4fee8aba5053158f4010c118/jsoup-1.13.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-web/14/af6899fcd98420da5273f17e91b937fcc15a2ac9/javafx-web-14-win.jar" path-in-jar="/" />
+      <element id="module-output" name="msgbote.main" />
     </root>
   </artifact>
 </component>

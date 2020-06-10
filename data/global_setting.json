@@ -1,7 +1,7 @@
 {
 	"debug":{
 		"package":"com.kakao.talk",
-		"sender":"h!",
+		"sender":"DEBUG SENDER",
 		"bot":"DEBUG BOT",
 		"isGroupChat":true,
 		"room":"DEBUG ROOM",
@@ -9,7 +9,7 @@
 	},
 	"program":{
 		"autoCompile":true,
-		"theme":"Dark",
+		"theme":"dark",
 		"autoSave":true
 	},
 	"device":{
@@ -17,9 +17,9 @@
 		"androidVersionCode":"29",
 		"build":"android.os.Build@c36783a",
 		"batteryStatus":5,
-		"phoneBrand":"ac",
 		"batteryTemperature":290,
 		"batteryVoltage":4239,
+		"phoneBrand":"ac",
 		"plugType":"ac",
 		"isCharging":true,
 		"batteryHealth":3,

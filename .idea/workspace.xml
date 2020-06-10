@@ -25,12 +25,346 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfcf8d5c-c828-4d05-a1c9-2f21a79ec0c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/modules/crypto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/modules/kaling.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bots/TEST/bot.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bots/TEST/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bots/TEST/log.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bots/TEST/modules/crypto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bots/TEST/modules/kaling.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bots/hi/bot.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bots/hi/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bots/hi/log.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/MessengerBotSimulator_JAVA_Edition_jar/MessengerBotSimulator-JAVA-Edition.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/resources/forms/ChatViewAllContents.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/resources/forms/ShowAboutDialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/resources/forms/ShowChatContents.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/resources/js/require.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/resources/styles/ContentsView.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenAboutDialogAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/About/IAboutDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/window/IWindowType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/forms/AboutDialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/forms/ShowAboutDialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/emulation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/emulation_focused.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MessengerBotSimulator_JAVA_Edition_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MessengerBotSimulator_JAVA_Edition_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bots/TEST/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bots/TEST/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System_Root/storage/self/primary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/forms/ActiveAreaPart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/forms/ActiveAreaPart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/forms/DebugRoomTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/forms/DebugRoomTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/forms/DialogBoxView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/forms/DialogBoxView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/forms/GlobalLogTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/forms/GlobalLogTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/forms/WindowView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/forms/WindowView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bots/TEST/bot.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bots/TEST/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bots/TEST/log.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/Launcher$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/Launcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/Api.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/AppData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/Bridge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/DataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/FileStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/GlobalLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/ImageDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/Log.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/Replier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/api/require.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/engine/PrimitiveWrapFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/engine/ResponseParameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/engine/ScriptContainer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/engine/ScriptEngine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/engine/ScriptManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/compiler/engine/ScriptUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/managers/BotManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/managers/FileManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/managers/LogManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/actions/CopyAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/actions/DeleteAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/MainView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/AddBotLogItemAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/AddChatMessageAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/AddEditorTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/AddExplorerBotAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/ChangeActivityTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/CloseAllTabsAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/CloseOtherTabsAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/CloseTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/CreateBotAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/DeleteBotAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/DeleteEditorPaneAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/HideSideBarAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/MoveEditorTabAction$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/MoveEditorTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/OpenBotLogTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/OpenDebugRoomTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/OpenDesktopAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/OpenGlobalLogTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/OpenScriptTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/OpenSettingsTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/RefreshBotsAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/RenameBotAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/ResizeSideBarAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/SaveAllEditorTabsAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/SaveEditorTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/SelectActivityTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/SelectEditorTabAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/ShowChatViewAllContents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/ShowNotificationAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/ShowToastMessageAction$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/ShowToastMessageAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/SplitEditorPaneAction$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/actions/SplitEditorPaneAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/dialogs/CreateBotDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/dialogs/DeleteBotDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/dialogs/ExistsBotDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/dialogs/ImportScriptDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/dialogs/RenameBotDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/dialogs/ShowErrorDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/dialogs/ShowEventDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/dialogs/ShowWarningDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/parts/ActiveAreaPart$BotsTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/parts/ActiveAreaPart$DebugTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/parts/ActiveAreaPart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/parts/EditorAreaPart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/parts/StatusBarPart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/tabs/DebugRoomTab$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/tabs/DebugRoomTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/tabs/GlobalLogTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/tabs/SettingsTab$BotsTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/tabs/SettingsTab$DebugTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/tabs/SettingsTab$DeviceTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/tabs/SettingsTab$ProgramTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/application/views/tabs/SettingsTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/openapi/IJSONArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/openapi/IJSONObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/chat/IChatViewAllContents$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/chat/IChatViewAllContents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/IButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ICheckBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ICodeArea$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ICodeArea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/IContextMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/IListView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ILogItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ILogType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ILogView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ILogView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/IMenuButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/IMenuItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ISVGGlyph$ISVGGlyphs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ISVGGlyph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/IScrollPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ITab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ITabPane$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ITabPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ITextArea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/ITextField.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/components/IToggleButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/dialog/IDialogBoxType$DOCUMENT.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/dialog/IDialogBoxType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/dialog/IDialogBoxView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/dialog/IDialogBoxView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/editor/IEditorPane$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/editor/IEditorPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/editor/IEditorTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/skins/IScrollBarSkin$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/skins/IScrollBarSkin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/skins/ITabPaneSkin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/window/IWindowEvent$MoveListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/window/IWindowEvent$ResizeListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/window/IWindowEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/window/IWindowScene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/window/IWindowType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/window/IWindowView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/platform/ui/window/IWindowView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/settings/Settings$Public.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/settings/Settings$Script.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/settings/Settings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/utils/ProgramUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/beuwi/simulator/utils/ResourceUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/ActiveAreaPart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/ActiveAreaPart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/CreateBotDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/CreateBotDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/DebugRoomTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/DebugRoomTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/DialogBoxView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/DialogBoxView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/GlobalLogTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/GlobalLogTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/ImportScriptDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/ImportScriptDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/RenameBotDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/RenameBotDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/SettingsTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/SettingsTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/ShowChatContents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/ShowChatContents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/ShowErrorDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/ShowErrorDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/WindowView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/forms/WindowView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/images/simulation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/images/simulation_focused.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/styles/ActiveAreaPart.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/styles/ActiveAreaPart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/themes/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/themes/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/themes/light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/msgbots" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/msgbots.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/global_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/global_log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/modules/parse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/global_setting.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/global_setting.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/modules/crypto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/modules/kaling.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/script_default.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/script_default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/script_unified.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/script_unified.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/forms/ActiveAreaPart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/forms/ActiveAreaPart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/forms/CreateBotDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/forms/CreateBotDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/forms/DebugRoomTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/forms/DebugRoomTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/forms/DialogBoxView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/forms/DialogBoxView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/forms/GlobalLogTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/forms/GlobalLogTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/forms/ImportScriptDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/forms/ImportScriptDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/forms/RenameBotDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/forms/RenameBotDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/forms/SettingsTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/forms/SettingsTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/forms/ShowErrorDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/forms/ShowErrorDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/forms/WindowView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/forms/WindowView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/themes/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/themes/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Api.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/AppData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/AppData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/Bridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Bridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/FileStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/FileStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/GlobalLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/ImageDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/ImageDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/Replier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Replier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/api/require.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/engine/PrimitiveWrapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/PrimitiveWrapFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/engine/ResponseParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ResponseParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/engine/ScriptContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/engine/ScriptEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/engine/ScriptManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/compiler/engine/ScriptUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/managers/BotManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/managers/BotManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/managers/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/managers/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/managers/LogManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/managers/LogManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/actions/CopyAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/actions/CopyAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/actions/DeleteAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/actions/DeleteAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/AddBotLogItemAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/AddBotLogItemAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/AddChatMessageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/AddChatMessageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/AddEditorTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/AddEditorTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/AddExplorerBotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/AddExplorerBotAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/ChangeActivityTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/ChangeActivityTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/CloseAllTabsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/CloseAllTabsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/CloseOtherTabsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/CloseOtherTabsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/CloseTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/CloseTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/CreateBotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/CreateBotAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/DeleteBotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/DeleteBotAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/DeleteEditorPaneAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/DeleteEditorPaneAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/HideSideBarAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/HideSideBarAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/MoveEditorTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/MoveEditorTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/OpenBotLogTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenBotLogTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/OpenDebugRoomTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenDebugRoomTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/OpenDesktopAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenDesktopAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/OpenGlobalLogTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenGlobalLogTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/OpenScriptTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenScriptTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/OpenSettingsTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenSettingsTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/RefreshBotsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/RefreshBotsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/RenameBotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/RenameBotAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/ResizeSideBarAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/ResizeSideBarAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/SaveAllEditorTabsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/SaveAllEditorTabsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/SaveEditorTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/SaveEditorTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/SelectActivityTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/SelectActivityTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/SelectEditorTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/SelectEditorTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/ShowChatViewAllContents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/ShowChatViewAllContents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/ShowNotificationAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/ShowNotificationAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/ShowToastMessageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/ShowToastMessageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/actions/SplitEditorPaneAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/SplitEditorPaneAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/dialogs/CreateBotDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/dialogs/CreateBotDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/dialogs/DeleteBotDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/dialogs/DeleteBotDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/dialogs/ExistsBotDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/dialogs/ExistsBotDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/dialogs/ImportScriptDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/dialogs/ImportScriptDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/dialogs/RenameBotDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/dialogs/RenameBotDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/dialogs/ShowErrorDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/dialogs/ShowErrorDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/dialogs/ShowEventDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/dialogs/ShowEventDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/dialogs/ShowWarningDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/dialogs/ShowWarningDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/parts/ActiveAreaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/parts/ActiveAreaPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/parts/EditorAreaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/parts/EditorAreaPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/parts/StatusBarPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/parts/StatusBarPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/tabs/DebugRoomTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/tabs/DebugRoomTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/tabs/GlobalLogTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/tabs/GlobalLogTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/application/views/tabs/SettingsTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/tabs/SettingsTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/openapi/IJSONArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/openapi/IJSONArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/openapi/IJSONObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/openapi/IJSONObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/chat/IChatViewAllContents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/chat/IChatViewAllContents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/IButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/IButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/ICheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ICheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/ICodeArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ICodeArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/IContextMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/IContextMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/IListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/IListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/ILogItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ILogItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/ILogType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ILogType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/ILogView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ILogView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/IMenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/IMenuButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/IMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/IMenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/ISVGGlyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ISVGGlyph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/IScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/IScrollPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/ITab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ITab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/ITabPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ITabPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/ITextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ITextArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/ITextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ITextField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/components/IToggleButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/IToggleButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/dialog/IDialogBoxType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/dialog/IDialogBoxType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/dialog/IDialogBoxView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/dialog/IDialogBoxView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/editor/IEditorPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/editor/IEditorPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/editor/IEditorTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/editor/IEditorTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/skins/IScrollBarSkin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/skins/IScrollBarSkin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/skins/ITabPaneSkin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/skins/ITabPaneSkin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/window/IWindowEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/window/IWindowEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/window/IWindowScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/window/IWindowScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/window/IWindowType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/platform/ui/window/IWindowView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/window/IWindowView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/settings/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/settings/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/utils/ProgramUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/beuwi/simulator/utils/ResourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/utils/ResourceUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/ActiveAreaPart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/ActiveAreaPart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/CreateBotDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/CreateBotDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/DebugRoomTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/DebugRoomTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/DialogBoxView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/DialogBoxView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/GlobalLogTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/GlobalLogTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/ImportScriptDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/ImportScriptDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/RenameBotDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/RenameBotDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/SettingsTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/SettingsTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/ShowChatContents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/ShowChatContents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/ShowErrorDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/ShowErrorDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/WindowView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forms/WindowView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/simulation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/simulation_focused.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/ActiveAreaPart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/ActiveAreaPart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/themes/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/themes/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/themes/light.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/ShowAboutDialog.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +380,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -68,16 +403,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/styles" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.2745267" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hui16\Documents\GitHub\MessengerBotSimulator-JAVA-Edition\src\main\resources\styles" />
       <recent name="C:\Users\hui16\Documents\GitHub\MessengerBotSimulator-JAVA-Edition\src\main\resources\forms" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.hui1601.emulator.platform.application.views.actions" />
+      <recent name="org.hui1601.emulator.platform.ui.window" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.MessengerBotSimulator-JAVA-Edition [run]">
@@ -178,58 +517,74 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="295" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590818377785" />
-    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590624232679">
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591497415007">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590624232679" />
-    <state x="765" y="256" key="#com.intellij.ide.util.MemberChooser" timestamp="1590809260990">
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591497415007" />
+    <state x="765" y="256" key="#com.intellij.ide.util.MemberChooser" timestamp="1591787538341">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="765" y="256" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590796294103" />
-    <state x="765" y="256" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1590809260990" />
+    <state x="765" y="256" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1591787538341" />
     <state x="689" y="329" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1590584098062">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="689" y="329" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590584098062" />
+    <state x="751" y="446" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1591366828449">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="751" y="446" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1080@0.0.1920.1080" timestamp="1591366828449" />
+    <state x="758" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591494364999">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="758" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591494364999" />
     <state x="690" y="294" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1590583334101">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="294" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590583334101" />
-    <state x="912" y="280" key="FileChooserDialogImpl" timestamp="1590623453819">
+    <state x="912" y="280" key="FileChooserDialogImpl" timestamp="1591628578685">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="912" y="280" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1590623453819" />
-    <state width="750" height="198" key="GridCell.Tab.0.bottom" timestamp="1590850718276">
+    <state x="912" y="280" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1591628578685" />
+    <state width="1368" height="250" key="GridCell.Tab.0.bottom" timestamp="1591790013056">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="938" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
-    <state width="750" height="198" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590850718276" />
-    <state width="750" height="198" key="GridCell.Tab.0.center" timestamp="1590850718276">
+    <state width="1368" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1591790013056" />
+    <state width="1368" height="250" key="GridCell.Tab.0.center" timestamp="1591790013056">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="938" height="292" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
-    <state width="750" height="198" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590850718276" />
-    <state width="750" height="198" key="GridCell.Tab.0.left" timestamp="1590850718276">
+    <state width="1368" height="250" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1591790013056" />
+    <state width="1368" height="250" key="GridCell.Tab.0.left" timestamp="1591790013056">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="938" height="292" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
-    <state width="750" height="198" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590850718276" />
-    <state width="750" height="198" key="GridCell.Tab.0.right" timestamp="1590850718276">
+    <state width="1368" height="250" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1591790013056" />
+    <state width="1368" height="250" key="GridCell.Tab.0.right" timestamp="1591790013056">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="938" height="292" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
-    <state width="750" height="198" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590850718276" />
-    <state x="440" y="114" width="1384" height="851" key="SettingsEditor" timestamp="1590623459992">
+    <state width="1368" height="250" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1591790013056" />
+    <state x="440" y="114" width="1384" height="851" key="SettingsEditor" timestamp="1591701533774">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="440" y="114" width="1384" height="851" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1590623459992" />
-    <state x="752" y="285" key="refactoring.ChangeSignatureDialog" timestamp="1590628769050">
+    <state x="440" y="114" width="1384" height="851" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1591701533774" />
+    <state x="780" y="193" width="584" height="804" key="find.popup" timestamp="1591365360942">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="752" y="285" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590628769050" />
+    <state x="780" y="193" width="584" height="804" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1591365360942" />
+    <state x="752" y="285" key="refactoring.ChangeSignatureDialog" timestamp="1591787544388">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="752" y="285" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591787544388" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1590803491416">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1590803491416" />
+    <state x="623" y="259" key="search.everywhere.popup" timestamp="1591705114242">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="259" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1591705114242" />
   </component>
 </project>

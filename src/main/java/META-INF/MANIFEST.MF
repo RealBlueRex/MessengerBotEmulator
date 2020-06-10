@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: org.beuwi.simulator.Launcher
+Main-Class: org.hui1601.emulator.Launcher
