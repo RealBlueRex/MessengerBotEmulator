@@ -162,7 +162,23 @@
 {
 	-fx-padding: 5;
 }
+<<<<<<< Updated upstream
 .toast-message
+=======
+.ifx-code-area .paragraph-text .text.keyword { -fx-font-family: 'Tuffy Italic'; -fx-fill: #499CD5;}
+.ifx-code-area .paragraph-text .text.semicolon { }
+.ifx-code-area .paragraph-text .text.paren { }
+.ifx-code-area .paragraph-text .text.bracket { }
+.ifx-code-area .paragraph-text .text.brace { }
+.ifx-code-area .paragraph-text .text.string { -fx-fill: #CE9178; }
+.ifx-code-area .paragraph-text .text.number { -fx-fill: #499CD5; }
+.ifx-code-area .paragraph-text .text.comment { -fx-fill: #6A9955; }
+.ifx-code-area .paragraph-text .text.regex { -fx-fill: #CE9178;}
+/* .ifx-code-area .paragraph-text .text.parameter { -fx-fill: #729DB3; } */
+
+.ifx-tab .tab-close-button:hover .glyph,
+.ifx-tab:selected .tab-close-button .glyph
+>>>>>>> Stashed changes
 {
 	-fx-background-color: #252526;
 	-fx-background-insets: 5;

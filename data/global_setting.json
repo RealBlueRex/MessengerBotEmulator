@@ -11,5 +11,23 @@
 		"autoCompile":true,
 		"theme":"Dark",
 		"autoSave":true
+<<<<<<< Updated upstream
+=======
+	},
+	"device":{
+		"phoneModel":"Redmi Note 7",
+		"phoneCodeName":"lavender",
+		"androidVersionCode":"29",
+		"build":"android.os.Build@c36783a",
+		"batteryStatus":5,
+		"batteryTemperature":290,
+		"batteryVoltage":4239,
+		"phoneBrand":"ac",
+		"plugType":"ac",
+		"isCharging":true,
+		"batteryHealth":3,
+		"androidVersionName":"10",
+		"batteryLevel":100
+>>>>>>> Stashed changes
 	}
 }

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MessengerBotSimulator-JAVA-Edition:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bfcf8d5c-c828-4d05-a1c9-2f21a79ec0c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/AppData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/global_modules/crypto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/global_modules/kaling.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot/Api.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot/Device.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot/File.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot/FileStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot/ImageDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot/KakaoTalk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot/Replier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/managers/AppDataManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/tabs/BotSettingsTab.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/TuffyItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/forms/GlobalSettingsTab.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/js/timer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bots/TEST/bot.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bots/TEST/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bots/TEST/log.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/Launcher$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/Launcher$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/Launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/api/Api.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/api/AppData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/api/Bridge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/api/DataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/api/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/api/FileStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/api/ImageDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/api/Log.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/api/Replier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/api/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/engine/ResponseParameters.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/engine/ResponseParameters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/engine/ScriptEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/engine/ScriptEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/engine/ScriptManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/engine/ScriptManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/engine/ScriptUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/compiler/engine/ScriptUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/managers/BotManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/managers/BotManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/managers/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/managers/FileManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/managers/LogManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/managers/LogManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/AddExplorerBotAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/AddExplorerBotAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/CreateBotAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/CreateBotAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/DeleteBotAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/DeleteBotAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/OpenGlobalLogTabAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/OpenGlobalLogTabAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/OpenScriptTabAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/OpenScriptTabAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/OpenSettingsTabAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/OpenSettingsTabAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/RefreshBotsAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/RefreshBotsAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/SaveEditorTabAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/SaveEditorTabAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/SplitEditorPaneAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/actions/SplitEditorPaneAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/dialogs/DeleteBotDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/dialogs/DeleteBotDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/parts/EditorAreaPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/parts/EditorAreaPart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/tabs/SettingsTab$BotsTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/tabs/SettingsTab$DebugTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/tabs/SettingsTab$DeviceTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/tabs/SettingsTab$ProgramTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/application/views/tabs/SettingsTab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/openapi/IJSONObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/openapi/IJSONObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/components/ICodeArea$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/components/ICodeArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/components/ICodeArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/components/IListView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/components/IListView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/components/ILogView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/components/ILogView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/components/ILogView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/components/ILogView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/dialog/IDialogBoxView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/dialog/IDialogBoxView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/dialog/IDialogBoxView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/dialog/IDialogBoxView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/editor/IEditorTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/editor/IEditorTab.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/window/IWindowView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/window/IWindowView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/window/IWindowView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/platform/ui/window/IWindowView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/settings/Settings$Public.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/settings/Settings$Public.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/settings/Settings$Script.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/settings/Settings$Script.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/utils/ResourceUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/hui1601/emulator/utils/ResourceUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/forms/SettingsTab.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/themes/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/themes/dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bots/TEST/bot.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/bots/TEST/bot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bots/TEST/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/bots/TEST/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bots/TEST/modules/crypto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bots/TEST/modules/kaling.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bots/hi/bot.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/bots/hi/bot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bots/hi/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/bots/hi/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/global_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/global_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/global_setting.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/global_setting.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/Api.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/AppData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/AppData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Bridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/Bridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/FileStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/FileStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/ImageDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/ImageDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Replier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/Replier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ResponseParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ResponseParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/managers/BotManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/managers/BotManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/managers/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/managers/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/managers/LogManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/managers/LogManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/AddExplorerBotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/AddExplorerBotAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/CreateBotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/CreateBotAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/DeleteBotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/DeleteBotAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenGlobalLogTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenGlobalLogTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenScriptTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenScriptTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenSettingsTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenSettingsTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/RefreshBotsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/RefreshBotsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/SplitEditorPaneAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/SplitEditorPaneAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/dialogs/DeleteBotDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/dialogs/DeleteBotDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/parts/EditorAreaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/parts/EditorAreaPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/tabs/SettingsTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/tabs/GlobalSettingsTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/openapi/IJSONObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/openapi/IJSONObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ICodeArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ICodeArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/IListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/IListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ILogView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/components/ILogView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/dialog/IDialogBoxType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/dialog/IDialogBoxType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/dialog/IDialogBoxView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/dialog/IDialogBoxView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/editor/IEditorTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/editor/IEditorTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/window/IWindowView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/ui/window/IWindowView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/utils/ResourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/utils/ResourceUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forms/SettingsTab.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/themes/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/themes/dark.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cUErfjY9MJu4kZnHeYlzojizB6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="JavaClassFindUsagesOptions.isDerivedClasses" value="true" />
+    <property name="JavaClassFindUsagesOptions.isFieldsUsages" value="true" />
+    <property name="JavaClassFindUsagesOptions.isMethodsUsages" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2745267" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hui16\Documents\GitHub\MessengerBotEmulator-JAVA-Edition\src\main\java\org\hui1601\emulator\compiler\api\greenbot" />
+      <recent name="C:\Users\hui16\Documents\GitHub\MessengerBotSimulator-JAVA-Edition\src\main\resources\styles" />
+      <recent name="C:\Users\hui16\Documents\GitHub\MessengerBotSimulator-JAVA-Edition\src\main\resources\forms" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.hui1601.emulator.platform.application.views.tabs" />
+      <recent name="org.hui1601.emulator.compiler.api.greenbot" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.hui1601.emulator.platform.application.views.actions" />
+      <recent name="org.hui1601.emulator.platform.ui.window" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.MessengerBotEmulator [run]">
+    <configuration name="MessengerBotEmulator [build]" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MessengerBotEmulator [run]" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.MessengerBotEmulator [build]" />
+      <item itemvalue="Gradle.MessengerBotEmulator [run]" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfcf8d5c-c828-4d05-a1c9-2f21a79ec0c7" name="Default Changelist" comment="" />
+      <created>1590574971836</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590574971836</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="845" y="402" key="#Notifications" timestamp="1590574985704">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="845" y="402" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1590574985704" />
+    <state x="690" y="295" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1590818377785">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="295" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590818377785" />
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592658008916">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592658008916" />
+    <state x="765" y="256" key="#com.intellij.ide.util.MemberChooser" timestamp="1592708558777">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="765" y="256" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590796294103" />
+    <state x="765" y="256" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1592708558777" />
+    <state x="689" y="329" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1590584098062">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="689" y="329" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590584098062" />
+    <state x="682" y="432" width="558" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592708935967">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="682" y="432" width="558" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1080@0.0.1920.1080" timestamp="1592708935967" />
+    <state x="751" y="446" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1591366828449">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="751" y="446" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1080@0.0.1920.1080" timestamp="1591366828449" />
+    <state x="758" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591494364999">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="758" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591494364999" />
+    <state x="690" y="294" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1590583334101">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="294" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590583334101" />
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1593049491032">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1593049491032" />
+    <state x="912" y="280" key="FileChooserDialogImpl" timestamp="1591628578685">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="912" y="280" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1591628578685" />
+    <state width="1404" height="269" key="GridCell.Tab.0.bottom" timestamp="1593240518253">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
+    <state width="1404" height="269" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1593240518253" />
+    <state width="1404" height="269" key="GridCell.Tab.0.center" timestamp="1593240518252">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="292" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
+    <state width="1404" height="269" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1593240518252" />
+    <state width="1404" height="269" key="GridCell.Tab.0.left" timestamp="1593240518252">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="292" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
+    <state width="1404" height="269" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1593240518252" />
+    <state width="1404" height="269" key="GridCell.Tab.0.right" timestamp="1593240518253">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="292" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
+    <state width="1404" height="269" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1593240518253" />
+    <state x="540" y="282" key="IDE.errors.dialog" timestamp="1592708068244">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="540" y="282" key="IDE.errors.dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592708068244" />
+    <state x="440" y="114" width="1384" height="851" key="SettingsEditor" timestamp="1593238047454">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="440" y="114" width="1384" height="851" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1593238047454" />
+    <state x="780" y="193" width="584" height="804" key="find.popup" timestamp="1591365360942">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="780" y="193" width="584" height="804" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1591365360942" />
+    <state x="752" y="285" key="refactoring.ChangeSignatureDialog" timestamp="1593049182309">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="752" y="285" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1593049182309" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1590803491416">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1590803491416" />
+    <state x="623" y="259" key="search.everywhere.popup" timestamp="1591705114242">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="259" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1591705114242" />
+  </component>
+</project>

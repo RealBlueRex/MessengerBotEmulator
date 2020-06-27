@@ -1,0 +1,12 @@
+{
+	"main":"index.js",
+	"option":{
+		"scriptPower":true,
+		"offOnRuntimeError":true,
+		"optimization":1,
+		"useUnifiedParams":false,
+		"useBabel":false,
+		"apiLevel":1,
+		"Bridge":false
+	}
+}

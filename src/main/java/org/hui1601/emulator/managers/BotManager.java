@@ -1,0 +1,22 @@
+package org.hui1601.emulator.managers;
+
+import javafx.scene.control.CheckBox;
+import org.hui1601.emulator.platform.ui.components.IToggleButton;
+
+import java.util.HashMap;
+
+public class BotManager {
+    public static HashMap<String, Object> data = new HashMap<>();
+
+    public static void setPower(String name, boolean power) {
+        ((IToggleButton) data.get("@switch::" + name)).setSelected(power);
+    }
+
+    public static void setCompiled(String name, boolean compiled) {
+        ((CheckBox) data.get("@check::" + name)).setSelected(compiled);
+    }
+
+    public static boolean getPower(String name) {
+        return !((IToggleButton) data.get("@switch::" + name)).isSelected();
+    }
+}
