@@ -7,8 +7,6 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.InputStream;
 import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
 
 public class ResourceUtils {
     public static InputStream getFont(String name) {
@@ -29,7 +27,8 @@ public class ResourceUtils {
 
     public static URL getForm(String name) {
         try {
-            return (new File("src/main/resources/forms/" + name + ".fxml").toURI()).toURL();
+            URL location = (new File("src/main/resources/forms/" + name + ".fxml").toURI()).toURL();
+            return location;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -63,14 +62,6 @@ public class ResourceUtils {
     public static URL getSVG(String name) {
         try {
             return (new File("src/main/resources/svgs/" + name + ".svg").toURI()).toURL();
-        } catch (Exception e) {
-            return null;
-        }
-    }
-
-    public static String getAllFileContents(String path, Charset ch){
-        try {
-            return String.join("\n", Files.readAllLines(new File(path).toPath(), ch));
         } catch (Exception e) {
             return null;
         }

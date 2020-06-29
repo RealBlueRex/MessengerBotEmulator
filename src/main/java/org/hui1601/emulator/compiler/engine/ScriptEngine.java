@@ -1,7 +1,7 @@
 package org.hui1601.emulator.compiler.engine;
 
 import javafx.application.Platform;
-import org.hui1601.emulator.compiler.api.messengerbot_v1.*;
+import org.hui1601.emulator.compiler.api.*;
 import org.hui1601.emulator.managers.BotManager;
 import org.hui1601.emulator.managers.FileManager;
 import org.hui1601.emulator.managers.LogManager;
@@ -45,7 +45,9 @@ public class ScriptEngine {
         if (Settings.getPublicSetting("program").getBoolean("autoSave")) {
             SaveEditorTabAction.update(name);
         }
-        int optimization = ((Long) Settings.getScriptSetting(name).getJSONObject("option").get("optimization")).intValue();
+        int optimization = ((Long) Settings.getScriptSetting(name)
+                .getJSONObject("option")
+                .get("optimization")).intValue();
 
         Context parseContext;
 
@@ -58,7 +60,6 @@ public class ScriptEngine {
             if (!isManual) {
                 Context.reportError(e.toString());
             }
-
             return false;
         }
 
@@ -82,29 +83,37 @@ public class ScriptEngine {
 
             ScriptableObject.defineProperty(scope, "BOT_NAME", name, flags);
             String type = FileManager.read(FileManager.getBotType(name));
-            switch (Objects.requireNonNull(type)) {
+            if(type == null)
+            {
+                if(FileManager.read(FileManager.getBotSetting(name)) == null)
+                    FileManager.save(FileManager.getBotType(name), "greenbot");
+                else
+                    FileManager.save(FileManager.getBotType(name), "msgbot");
+                type = FileManager.read(FileManager.getBotType(name));
+            }
+            switch (Objects.requireNonNull(type).trim()) {
                 case "msgbot" -> {
-                    if((((JSONObject) ((JSONObject) new JSONParser().parse(FileManager.read(FileManager.getBotSetting(name)))).get("option")).get("apiLevel")).equals("1")) {
+                    if((Long)(((JSONObject) ((JSONObject) new JSONParser().parse(FileManager.read(FileManager.getBotSetting(name)))).get("option")).get("apiLevel")) == 1) {
                         parseContext.evaluateReader(scope, Objects.requireNonNull(ResourceUtils.getJS("timer")), "timer", 1, null);
                         ScriptableObject.defineProperty(scope, "Api",
-                                ScriptUtils.convert(new Api(scope, name)), flags);
+                                ScriptUtils.convert(new org.hui1601.emulator.compiler.api.messengerbot_v1.Api(scope, name)), flags);
                         ScriptableObject.defineProperty(scope, "Device",
-                                ScriptUtils.convert(new Device(scope)), flags);
+                                ScriptUtils.convert(new org.hui1601.emulator.compiler.api.messengerbot_v1.Device(scope)), flags);
                         ScriptableObject.defineProperty(scope, "Log",
-                                ScriptUtils.convert(new Log(scope, name)), flags);
+                                ScriptUtils.convert(new org.hui1601.emulator.compiler.api.messengerbot_v1.Log(scope, name)), flags);
                         ScriptableObject.defineProperty(scope, "DataBase",
-                                ScriptUtils.convert(new DataBase(scope, name)), flags);
+                                ScriptUtils.convert(new org.hui1601.emulator.compiler.api.messengerbot_v1.DataBase(scope, name)), flags);
                         ScriptableObject.defineProperty(scope, "Utils",
-                                ScriptUtils.convert(new Utils(scope, name)), flags);
+                                ScriptUtils.convert(new org.hui1601.emulator.compiler.api.messengerbot_v1.Utils(scope, name)), flags);
                         ScriptableObject.defineProperty(scope, "Bridge",
-                                ScriptUtils.convert(new Bridge(scope)), flags);
+                                ScriptUtils.convert(new org.hui1601.emulator.compiler.api.messengerbot_v1.Bridge(scope)), flags);
                         ScriptableObject.defineProperty(scope, "AppData",
-                                ScriptUtils.convert(new AppData(scope)), flags);
+                                ScriptUtils.convert(new org.hui1601.emulator.compiler.api.messengerbot_v1.AppData(scope)), flags);
                         ScriptableObject.defineProperty(scope, "FileStream",
-                                ScriptUtils.convert(new FileStream(scope)), flags);
+                                ScriptUtils.convert(new org.hui1601.emulator.compiler.api.messengerbot_v1.FileStream(scope)), flags);
                     }
                 }
-                case "green_bot" -> {
+                case "greenbot" -> {
                     ScriptableObject.defineProperty(scope, "Api",
                             ScriptUtils.convert(new org.hui1601.emulator.compiler.api.greenbot.Api(scope, name)), flags);
                     ScriptableObject.defineProperty(scope, "Device",
@@ -116,6 +125,7 @@ public class ScriptEngine {
                     ScriptableObject.defineProperty(scope, "KakaoTalk",
                             ScriptUtils.convert(new org.hui1601.emulator.compiler.api.greenbot.KakaoTalk(scope)), flags);
                 }
+                default -> throw new RuntimeException("Error: no such bot type");
             }
             execScope = scope;
 

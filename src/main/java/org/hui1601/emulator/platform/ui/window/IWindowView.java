@@ -16,7 +16,6 @@ import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.hui1601.emulator.Launcher;
 import org.hui1601.emulator.platform.application.views.MainView;
 import org.hui1601.emulator.platform.application.views.actions.*;
 import org.hui1601.emulator.platform.application.views.dialogs.CreateBotDialog;
@@ -159,7 +158,7 @@ public class IWindowView extends StackPane {
                         new IMenuItem("About", null, event -> new OpenAboutDialogAction(
                                 "Messenger Bot Emulator\n"+
                                 "Developer: hui1601\n"+
-                                "version: " + Launcher.version + "\n\n"+
+                                "version: 0.9.2\n\n"+
                                 "OpenSource Licence\n"+
                                 "org.beuwi.simulator(MessengerBotSimulator) - GPL3.0\n"+
                                 "Rhino-Require - Public Domain\n"+

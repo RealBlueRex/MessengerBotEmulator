@@ -6,6 +6,6 @@ public enum IDialogBoxType {
 
 
     public enum DOCUMENT {
-        ERROR, WARNING,EVENT
+        ERROR, WARNING,EVENT;
     }
 }

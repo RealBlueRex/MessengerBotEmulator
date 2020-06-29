@@ -57,20 +57,28 @@ public class DeleteBotDialog extends IDialogBoxView {
 
         btnDelete.setOnAction(event ->
         {
-            action();
+            try {
+                action();
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
         });
 
         setOnKeyPressed(event ->
         {
             if (event.getCode().equals(KeyCode.ENTER)) {
-                action();
+                try {
+                    action();
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
         label.setText("Delete bot '" + name + "'?");
     }
 
-    private void action() {
+    private void action() throws MalformedURLException {
         DeleteBotAction.update(name);
         close();
     }

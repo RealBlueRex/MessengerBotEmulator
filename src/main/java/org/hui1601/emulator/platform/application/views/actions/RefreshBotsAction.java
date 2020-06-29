@@ -24,7 +24,6 @@ public class RefreshBotsAction {
 
         File[] folders = FileManager.BOTS_FOLDER.listFiles(File::isDirectory);
 
-        assert folders != null;
         for (File folder : folders) {
             String name = folder.getName();
 

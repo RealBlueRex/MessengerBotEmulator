@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -84,12 +83,14 @@ public class IDialogBoxView extends StackPane implements Initializable {
 
     public void create() {
         switch (type) {
-            case APPLICATION -> {
+            case APPLICATION:
                 brpRootPane.getChildren().remove(brpRootPane.getLeft());
                 setMinSize(content.getMinWidth(), content.getMinHeight() + 68);
                 setPrefSize(content.getPrefWidth(), content.getPrefHeight() + 68);
-            }
-            case DOCUMENT -> {
+                break;
+
+            case DOCUMENT:
+
                 imvDialogIcon.setImage
                         (
                                 switch (document) {
@@ -98,10 +99,12 @@ public class IDialogBoxView extends StackPane implements Initializable {
                                     case EVENT -> ResourceUtils.getImage("event_big");
                                 }
                         );
+
                 setMinSize(content.getMinWidth() + 70, content.getMinHeight() + 68);
                 setPrefSize(content.getPrefWidth() + 70, content.getPrefHeight() + 68);
-            }
+                break;
         }
+        ;
 
         brpRootPane.setCenter(content);
 
@@ -113,8 +116,10 @@ public class IDialogBoxView extends StackPane implements Initializable {
 
         stage.addEventFilter(KeyEvent.KEY_PRESSED, event ->
         {
-            if (event.getCode() == KeyCode.ESCAPE) {
-                stage.close();
+            switch (event.getCode()) {
+                case ESCAPE:
+                    stage.close();
+                    break;
             }
         });
 
@@ -132,9 +137,13 @@ public class IDialogBoxView extends StackPane implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         btnOK.addEventHandler(ActionEvent.ACTION, event ->
-                stage.close());
+        {
+            stage.close();
+        });
 
         btnNO.addEventHandler(ActionEvent.ACTION, event ->
-                stage.close());
+        {
+            stage.close();
+        });
     }
 }

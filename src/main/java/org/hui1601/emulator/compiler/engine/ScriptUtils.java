@@ -9,21 +9,22 @@ import java.util.ArrayList;
 public class ScriptUtils {
     // Copyright (C) 2020 NenkaLab
     public static Object convert(ScriptableObject object) {
-        Class<? extends ScriptableObject> clazz;
-        ArrayList<String> functions;
-        String[] list;
-
-        clazz = object.getClass();
-        functions = new ArrayList<>();
-
-        for (Method method : clazz.getMethods())
-            if (method.getAnnotation(JSFunction.class) != null) functions.add(method.getName());
-
-        list = new String[functions.size()];
-
+        Class<?> clazz = object.getClass();
+        ArrayList functions = getFunctions(clazz);
+        String[] list = new String[functions.size()];
         functions.toArray(list);
-
         object.defineFunctionProperties(list, clazz, ScriptableObject.EMPTY);
         return object;
+    }
+
+    // Copyright (C) 2020 NenkaLab
+    public static ArrayList<String> getFunctions(Class<?> clazz) {
+        ArrayList list = new ArrayList<>();
+        for (Method method : clazz.getMethods()) {
+            if (method.getAnnotation(JSFunction.class) != null) {
+                list.add(method.getName());
+            }
+        }
+        return list;
     }
 }

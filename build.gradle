@@ -1,43 +1,33 @@
 plugins {
-    id 'java'
-    id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.8'
-    id 'org.beryx.jlink' version '2.19.0'
+	id 'java'
+	id 'application'
+	id 'org.openjfx.javafxplugin' version '0.0.8'
+	id 'org.beryx.jlink' version '2.19.0'
 }
 
-<<<<<<< Updated upstream
-group 'org.beuwi.msgbots'
-
-javafx {
-    version = '14.0.1'
-    modules = ['javafx.controls', 'javafx.fxml']
-=======
 java {
 	// jdk 14
-	sourceCompatibility = JavaVersion.VERSION_14
-	targetCompatibility = JavaVersion.VERSION_14
->>>>>>> Stashed changes
+	sourceCompatibility = JavaVersion.VERSION_14;
+	targetCompatibility = JavaVersion.VERSION_14;
 }
 
 application {
-    mainClassName = "org.beuwi.msgbots.Launcher"
+	mainClassName = "$moduleName/org.hui1601.emulator.Launcher"
 }
 
 repositories {
-    mavenCentral()
+	mavenCentral()
+}
+
+group "org.hui1601.emulator"
+version '0.9.2'//org.hui1601.emulator.platform.ui.window.IWindowView 179번 줄도 수정
+
+javafx {
+	version = '14'
+	modules = ['javafx.controls', 'javafx.fxml', 'javafx.web', 'javafx.swing', 'javafx.graphics']
 }
 
 dependencies {
-<<<<<<< Updated upstream
-    implementation group: 'org.jsoup', name: 'jsoup', version: '1.13.1'
-    implementation group: 'org.mozilla', name: 'rhino', version: '1.7.12'
-    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
-    implementation group: 'com.jfoenix', name: 'jfoenix', version: '9.0.8'
-    implementation group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.10.4'
-    implementation (group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1') {
-        exclude group: 'org.hamcrest', module: 'hamcrest-core'
-    }
-=======
 
 	// implementation group: 'org.json', name: 'json', version: '20190722'
 	implementation group: 'org.jsoup', name: 'jsoup', version: '1.13.1'
@@ -50,25 +40,27 @@ dependencies {
 	implementation group: 'com.jfoenix', name: 'jfoenix', version: '9.0.8'
 
 	implementation group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.10.4'
+
 	// error: module org.hui1601.emulator reads package org.hamcrest from both hamcrest.core and junit open
 	implementation (group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1') {
 		exclude group: 'org.hamcrest', module: 'hamcrest-core'
 	}
->>>>>>> Stashed changes
 }
 
 compileJava {
-    options.encoding = "UTF-8"
-    options.compilerArgs << "-Xlint:none"
+	options.encoding = "UTF-8"
+	options.compilerArgs << "-Xlint:none"
+
+	moduleOptions {
+		addExports = [
+				// 안하면 package is not visible import 오류남
+				'javafx.graphics/com.sun.javafx.util' : 'org.beuwi.simulator'
+		]
+	}
+}
+run {
 }
 
-<<<<<<< Updated upstream
-run {
-    jvmArgs '--add-exports', 'javafx.base/com.sun.javafx.event=ALL-UNNAMED',
-            '--add-exports', 'javafx.graphics/com.sun.javafx.iio=ALL-UNNAMED',
-            '--add-exports', 'javafx.graphics/com.sun.javafx.iio.common=ALL-UNNAMED',
-            '--add-exports', 'javafx.controls/com.sun.javafx.scene.control=ALL-UNNAMED'
-=======
 jlink {
 	options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
 
@@ -92,7 +84,7 @@ jlink {
 		installerOptions = [
 				'--vendor', 'hui1601',
 				'--app-version', version,
-		] as List<String>
+		]
 	}
 }
 jar {
@@ -104,5 +96,4 @@ jar {
 			it.isDirectory() ? it : zipTree(it)
 		}
 	}
->>>>>>> Stashed changes
 }

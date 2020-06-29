@@ -39,34 +39,27 @@ public class ICodeArea extends StackPane {
                     // JAVA_SCRIPT
                     "arguments", "await", "debugger", "do",
                     "eval", "function", "in", "let",
-                    "typeof", "var", "with", "yield",
-
-                    // Messenger bot
-                    "Api", "Utils", "AppData", "Bridge", "Database", "Device", "FileStream", "Log"
+                    "typeof", "var", "with", "yield"
             };
 
     private static final String KEYWORD_PATTERN = "\\b(" + String.join("|", KEYWORDS) + ")\\b";
-    private static final String PAREN_PATTERN = "[()]";
-    private static final String BRACE_PATTERN = "[{}]";
-    private static final String BRACKET_PATTERN = "[\\[\\]]";
-    private static final String SEMICOLON_PATTERN = ";";
-    private static final String STRING_PATTERN = "\"([^\"\\\\]|\\\\.)*\"" + "|" + "'([^'\\\\]|\\\\.)*'";
-    private static final String NUMBER_PATTERN = "[+-]?((\\d+(\\.\\d*)?)|(\\.\\d+))";
+    private static final String PAREN_PATTERN = "\\(|\\)";
+    private static final String BRACE_PATTERN = "\\{|\\}";
+    private static final String BRACKET_PATTERN = "\\[|\\]";
+    private static final String SEMICOLON_PATTERN = "\\;";
+    private static final String STRING_PATTERN = "\"([^\"\\\\]|\\\\.)*\"";
     private static final String COMMENT_PATTERN = "//[^\n]*" + "|" + "/\\*(.|\\R)*?\\*/";
-    private static final String REGEX_PATTERN = "(/[^\n]*/)g?";
-    // private static final String PARAMETER_PATTEN = "\\{(.*)\\}"; // "\\{([\\w.]+)}";
+    // private static final String PARAMETER_PATTERN = "\\{(.*)\\}"; // "\\{([\\w.]+)}";
+
     final private static Pattern PATTERN = Pattern.compile
             (
-
-                    "(?<COMMENT>" + COMMENT_PATTERN + ")|" +
-                            "(?<KEYWORD>" + KEYWORD_PATTERN + ")|" +
+                    "(?<KEYWORD>" + KEYWORD_PATTERN + ")|" +
                             "(?<PAREN>" + PAREN_PATTERN + ")|" +
                             "(?<BRACE>" + BRACE_PATTERN + ")|" +
                             "(?<BRACKET>" + BRACKET_PATTERN + ")|" +
                             "(?<SEMICOLON>" + SEMICOLON_PATTERN + ")|" +
                             "(?<STRING>" + STRING_PATTERN + ")|" +
-                            "(?<REGEX>" + REGEX_PATTERN + ")|" +
-                            "(?<NUMBER>" + NUMBER_PATTERN + ")"
+                            "(?<COMMENT>" + COMMENT_PATTERN + ")"
             );
 
 	/* private SortedSet<String> entries;
@@ -100,12 +93,18 @@ public class ICodeArea extends StackPane {
                 ));
 
         area.textProperty().addListener((observable, oldText, newText) ->
-                area.setStyleSpans(0, computeHighlighting(newText)));
+        {
+            area.setStyleSpans(0, computeHighlighting(newText));
+        });
 
         area.setOnKeyPressed(event ->
         {
-            if (event.isControlDown() && event.getCode() == KeyCode.S) {
-                SaveEditorTabAction.update();
+            if (event.isControlDown()) {
+                switch (event.getCode()) {
+                    case S:
+                        SaveEditorTabAction.update();
+                        break;
+                }
             }
         });
 
@@ -130,7 +129,10 @@ public class ICodeArea extends StackPane {
 
         getChildren().add(pane);
 
-        Platform.runLater(area::requestFocus);
+        Platform.runLater(() ->
+        {
+            area.requestFocus();
+        });
     }
 
     private static StyleSpans<Collection<String>> computeHighlighting(String text) {
@@ -142,15 +144,14 @@ public class ICodeArea extends StackPane {
 
         while (matcher.find()) {
             String styleClass =
+
                     matcher.group("KEYWORD") != null ? "keyword" :
                             matcher.group("PAREN") != null ? "paren" :
                                     matcher.group("BRACE") != null ? "brace" :
                                             matcher.group("BRACKET") != null ? "bracket" :
                                                     matcher.group("SEMICOLON") != null ? "semicolon" :
                                                             matcher.group("STRING") != null ? "string" :
-                                                                    matcher.group("COMMENT") != null ? "comment":
-                                                                            matcher.group("REGEX") != null ? "regex":
-                                                                                matcher.group("NUMBER") != null ? "number" : null;
+                                                                    matcher.group("COMMENT") != null ? "comment" : null;
 
             assert styleClass != null;
 

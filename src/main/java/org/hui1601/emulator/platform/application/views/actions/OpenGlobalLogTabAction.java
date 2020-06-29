@@ -1,10 +1,11 @@
 package org.hui1601.emulator.platform.application.views.actions;
 
+import javafx.scene.control.ListView;
+import javafx.scene.layout.AnchorPane;
 import org.hui1601.emulator.platform.application.views.tabs.GlobalLogTab;
-import org.hui1601.emulator.platform.ui.components.ILogView;
 
 public class OpenGlobalLogTabAction {
-    private static ILogView listView;
+    private static ListView<AnchorPane> listView;
 
     public static void initialize() {
         listView = GlobalLogTab.getComponent();

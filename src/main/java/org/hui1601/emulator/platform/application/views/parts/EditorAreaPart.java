@@ -16,7 +16,7 @@ import java.util.List;
 public class EditorAreaPart {
     private static ObservableMap<String, Object> nameSpace;
 
-    private static final ObjectProperty<IEditorPane> property = new SimpleObjectProperty<>();
+    private static ObjectProperty<IEditorPane> property = new SimpleObjectProperty<>();
 
     private static SplitPane component;
 

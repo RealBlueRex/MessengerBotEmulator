@@ -7,7 +7,7 @@ import org.hui1601.emulator.utils.ResourceUtils;
 import java.net.MalformedURLException;
 
 public class OpenScriptTabAction {
-    public static void update(String name) {
+    public static void update(String name) throws MalformedURLException {
         AddEditorTabAction.update
                 (
                         ResourceUtils.getImage("tab_script"),

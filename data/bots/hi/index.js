@@ -1,6 +1,16 @@
 
+/**
+ * (String) room
+ * (String) sender
+ * (Boolean) isGroupChat
+ * (void) replier.reply(message)
+ * (Boolean) replier.reply(room, message, hideErrorToast = true) // true 고정값 반환
+ * (String) imageDB.getProfileBase64()
+ * (String) packageName
+ */
 
-//예제 부분
-function response(room, msg, sender, isGroupChat, replier) {
-    replier.reply(Utils.translate("ko", "zh-CN", "대한민국"));
+function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) 
+{
+replier.reply("a".repeat(1000));
+	replier.reply(Number.isNaN(NaN));
 }

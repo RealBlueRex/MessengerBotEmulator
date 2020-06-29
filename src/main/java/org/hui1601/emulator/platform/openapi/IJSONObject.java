@@ -14,7 +14,7 @@ public class IJSONObject extends JSONObject {
         super();
     }
 
-    public IJSONObject(File file) {
+    public IJSONObject(File file) throws MalformedURLException {
         try {
             this.putAll((JSONObject) new JSONParser().parse(FileManager.read(file)));
         } catch (Exception e) {
@@ -27,7 +27,7 @@ public class IJSONObject extends JSONObject {
     }
 
     public double getDouble(String type) {
-        return Double.parseDouble("" + this.get(type));
+        return Double.valueOf("" + this.get(type));
     }
 
     public Object getObject(Object type) {
@@ -35,18 +35,18 @@ public class IJSONObject extends JSONObject {
     }
 
     public String getString(String type) {
-        return "" + this.get(type);
+        return String.valueOf("" + this.get(type));
     }
 
     public int getInt(String type) {
-        return Integer.parseInt("" + get(type));
+        return Integer.valueOf("" + get(type));
     }
 
     public boolean getBoolean(String type) {
-        return Boolean.parseBoolean("" + get(type));
+        return Boolean.valueOf("" + get(type));
     }
 
-    public void putString(String type, String data) {
+    public void putString(String type, String data) throws MalformedURLException {
         this.put(type, data);
     }
 
@@ -54,15 +54,15 @@ public class IJSONObject extends JSONObject {
         this.put(type, data);
     }
 
-    public void putInt(String type, int data) {
+    public void putInt(String type, int data) throws MalformedURLException {
         this.put(type, data);
     }
 
-    public void putBoolean(String type, boolean data) {
+    public void putBoolean(String type, boolean data) throws MalformedURLException {
         this.put(type, data);
     }
 
-    public void putMap(Map map) {
+    public void putMap(Map map) throws MalformedURLException {
         this.putAll(map);
     }
 

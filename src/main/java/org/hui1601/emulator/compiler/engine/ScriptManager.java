@@ -1,6 +1,6 @@
 package org.hui1601.emulator.compiler.engine;
 
-import org.hui1601.emulator.compiler.api.messengerbot_v1.ImageDB;
+import org.hui1601.emulator.compiler.api.ImageDB;
 import org.hui1601.emulator.managers.BotManager;
 import org.hui1601.emulator.managers.FileManager;
 import org.hui1601.emulator.settings.Settings;
@@ -33,7 +33,7 @@ public class ScriptManager extends ScriptEngine {
         }
 
         for (String name : FileManager.getBotNames()) {
-            if (BotManager.getPower(name)) {
+            if (!BotManager.getPower(name)) {
                 continue;
             }
 

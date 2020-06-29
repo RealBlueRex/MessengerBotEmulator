@@ -17,6 +17,10 @@ public class BotManager {
     }
 
     public static boolean getPower(String name) {
-        return !((IToggleButton) data.get("@switch::" + name)).isSelected();
+        return ((IToggleButton) data.get("@switch::" + name)).isSelected();
+    }
+
+    public static boolean isCompiled(String name) {
+        return ((CheckBox) data.get("@check::" + name)).isSelected();
     }
 }

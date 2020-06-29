@@ -31,19 +31,19 @@ public class IEditorTab extends ITab {
     // Tab Close Button
     Button button = new Button();
 
-    public IEditorTab() {
+    public IEditorTab() throws MalformedURLException {
         this(null);
     }
 
-    public IEditorTab(String title) {
+    public IEditorTab(String title) throws MalformedURLException {
         this(title, null);
     }
 
-    public IEditorTab(String title, Node node) {
+    public IEditorTab(String title, Node node) throws MalformedURLException {
         this(title, title, node);
     }
 
-    public IEditorTab(String id, String title, Node node) {
+    public IEditorTab(String id, String title, Node node) throws MalformedURLException {
         this(ResourceUtils.getImage("tab_default"), id, title, node);
     }
 
@@ -81,8 +81,20 @@ public class IEditorTab extends ITab {
                         new IMenuItem("Select Next Tab", "Alt + \u202bRight", event -> SelectEditorTabAction.update(this, Side.RIGHT)),
                         new IMenuItem("Select Previous Tab", "Alt + \u202bLeft", event -> SelectEditorTabAction.update(this, Side.LEFT)),
                         new SeparatorMenuItem(),
-                        new IMenuItem("Split Right", event -> SplitEditorPaneAction.update(this, Side.RIGHT)),
-                        new IMenuItem("Split Left", event -> SplitEditorPaneAction.update(this, Side.LEFT))
+                        new IMenuItem("Split Right", event -> {
+                            try {
+                                SplitEditorPaneAction.update(this, Side.RIGHT);
+                            } catch (MalformedURLException e) {
+                                e.printStackTrace();
+                            }
+                        }),
+                        new IMenuItem("Split Left", event -> {
+                            try {
+                                SplitEditorPaneAction.update(this, Side.LEFT);
+                            } catch (MalformedURLException e) {
+                                e.printStackTrace();
+                            }
+                        })
                 ));
     }
 }

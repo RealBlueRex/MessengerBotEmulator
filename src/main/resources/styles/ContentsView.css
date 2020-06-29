@@ -1,0 +1,5 @@
+.contents .text-area
+{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13;
+}

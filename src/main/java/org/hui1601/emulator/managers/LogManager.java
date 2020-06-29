@@ -34,7 +34,7 @@ public class LogManager {
     public static List<ILogItem> load(File file) {
         try {
             if (!file.exists()) {
-                return new ArrayList<>();
+                return new ArrayList();
             }
 
             List<ILogItem> list = new ArrayList<>();
@@ -43,7 +43,16 @@ public class LogManager {
 
             for (Object object : array) {
                 JSONObject data = (JSONObject) object;
-                list.add(new ILogItem(String.valueOf(data.get("a")), String.valueOf(data.get("c")), Integer.parseInt("" + data.get("b"))));
+
+                list.add
+                        (
+                                new ILogItem
+                                        (
+                                                String.valueOf(data.get("a")),
+                                                String.valueOf(data.get("c")),
+                                                Integer.parseInt("" + data.get("b"))
+                                        )
+                        );
             }
 
             return list;

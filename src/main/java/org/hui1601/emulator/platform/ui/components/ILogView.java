@@ -6,7 +6,6 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.SelectionMode;
 import org.hui1601.emulator.managers.LogManager;
 
-@SuppressWarnings({"unchecked", "rawtypes", "unused"})
 public class ILogView extends IListView {
     {
         getStyleClass().add("ifx-log-view");

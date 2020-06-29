@@ -5,7 +5,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="msgbote.main" options="--add-exports java.net.http/jdk.internal.net.http.common=org.hui1601.emulator" />
+      <module name="MessengerBotSimulator.main" options="" />
+      <module name="msgbots.main" options="--add-exports javafx.graphics/com.sun.javafx.util=org.beuwi.simulator" />
     </option>
   </component>
 </project>

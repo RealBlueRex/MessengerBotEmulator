@@ -18,7 +18,7 @@ import org.hui1601.emulator.platform.application.views.parts.EditorAreaPart;
 import org.hui1601.emulator.platform.application.views.parts.StatusBarPart;
 import org.hui1601.emulator.platform.application.views.tabs.DebugRoomTab;
 import org.hui1601.emulator.platform.application.views.tabs.GlobalLogTab;
-import org.hui1601.emulator.platform.application.views.tabs.GlobalSettingsTab;
+import org.hui1601.emulator.platform.application.views.tabs.SettingsTab;
 import org.hui1601.emulator.platform.ui.window.IWindowType;
 import org.hui1601.emulator.platform.ui.window.IWindowView;
 import org.hui1601.emulator.utils.ResourceUtils;
@@ -28,9 +28,9 @@ import java.nio.file.*;
 import java.util.List;
 
 public class Launcher extends Application {
+    public static String version = "v.9.2";
     private final WatchService WATCH_SERVICE = FileSystems.getDefault().newWatchService();
     private WatchKey WATCH_KEY = null;
-    public static String version = "v.0.9.8";
 
     public Launcher() throws IOException {
 
@@ -95,7 +95,6 @@ public class Launcher extends Application {
             Font.loadFont(ResourceUtils.getFont("Roboto"), 0); // Family : "Roboto"
             Font.loadFont(ResourceUtils.getFont("RobotoBold"), 0); // Family : "Roboto Bold"
             Font.loadFont(ResourceUtils.getFont("RobotoMedium"), 0); // Family : "Roboto Medium"
-            Font.loadFont(ResourceUtils.getFont("TuffyItalic"), 0); // Family : "Tuffy Italic"
 
             // 기본 스타일 지정
             Application.setUserAgentStylesheet(ResourceUtils.getTheme("base"));
@@ -107,7 +106,7 @@ public class Launcher extends Application {
 
             DebugRoomTab.initialize();
             GlobalLogTab.initialize();
-            GlobalSettingsTab.initialize();
+            SettingsTab.initialize();
 
             // Initialize Actions
             AddBotLogItemAction.initialize();
@@ -154,7 +153,6 @@ public class Launcher extends Application {
             window.create();
             window.show();
         } catch (Exception e) {
-            e.printStackTrace();
             new ShowErrorDialog(e).display();
         }
     }

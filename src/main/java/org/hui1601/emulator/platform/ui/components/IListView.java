@@ -9,7 +9,6 @@ import org.hui1601.emulator.platform.application.actions.CopyAction;
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("unused")
 public class IListView<T> extends ListView<T> {
     {
         getStyleClass().add("ifx-list-view");
@@ -73,11 +72,11 @@ public class IListView<T> extends ListView<T> {
         getItems().add(item);
     }
 
-    public void addItems(List<T> list) {
+    public void addItems(List list) {
         getItems().addAll(list);
     }
 
-    public void setItems(List<T> list) {
+    public void setItems(List list) {
         getItems().setAll(list);
     }
 

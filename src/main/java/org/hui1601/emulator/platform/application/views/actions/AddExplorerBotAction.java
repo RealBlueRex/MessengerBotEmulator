@@ -23,10 +23,10 @@ import org.hui1601.emulator.platform.ui.components.IListView;
 import org.hui1601.emulator.platform.ui.components.IMenuItem;
 import org.hui1601.emulator.platform.ui.components.IToggleButton;
 import org.hui1601.emulator.settings.Settings;
+import org.json.simple.JSONObject;
+import org.mozilla.javascript.ScriptableObject;
 
-import java.io.File;
 import java.net.MalformedURLException;
-import java.util.Objects;
 
 public class AddExplorerBotAction {
     private static IListView listView;
@@ -41,7 +41,7 @@ public class AddExplorerBotAction {
                         new IMenuItem("Compile", event -> {
                             ScriptManager.setInitialize(name, true, false);
                         }),
-                        new IMenuItem("Power On / Off", event -> BotManager.setPower(name, BotManager.getPower(name))),
+                        new IMenuItem("Power On / Off", event -> BotManager.setPower(name, !BotManager.getPower(name))),
                         new SeparatorMenuItem(),
                         new IMenuItem("Show Log", event -> OpenBotLogTabAction.update(name)),
                         new SeparatorMenuItem(),
@@ -78,7 +78,11 @@ public class AddExplorerBotAction {
         item.setOnMouseClicked(event ->
         {
             if (MouseButton.PRIMARY.equals(event.getButton()) || MouseButton.MIDDLE.equals(event.getButton())) {
-                OpenScriptTabAction.update(name);
+                try {
+                    OpenScriptTabAction.update(name);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -96,15 +100,10 @@ public class AddExplorerBotAction {
         BotManager.data.put("@switch::" + name, power);
 
         check.setSelected(ScriptEngine.container.containsKey(name));
-        power.setSelected((Boolean) setting.getJSONObject("option").get("scriptPower"));
+        power.setSelected((Boolean) ((JSONObject)setting.get("option")).get("scriptPower"));
         power.selectedProperty().addListener((observable, oldValue, newValue) ->
         {
-            if(Objects.equals(FileManager.read(FileManager.getBotType(name)), "msgbot")) {
-                setting.getJSONObject("option").put("scriptPower", newValue);
-                FileManager.save(FileManager.getBotSetting(name), setting.toBeautifyString());
-            } else {
-                FileManager.save(new File(FileManager.getBotFolder(name).getPath() + File.separator + "botOn.txt"), newValue.toString());
-            }
+            setting.put("power", newValue);
         });
 
         listView.getItems().add(item);

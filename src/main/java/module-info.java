@@ -19,7 +19,6 @@ open module org.hui1601.emulator
     // requires org.json;
     requires org.jsoup;
     requires rhino;
-    requires java.net.http;
-    requires jdk.httpserver;
+
     // exports org.hui1601.emulator;
 }

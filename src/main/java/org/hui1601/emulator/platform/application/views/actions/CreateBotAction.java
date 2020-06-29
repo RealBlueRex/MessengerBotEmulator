@@ -22,6 +22,10 @@ public class CreateBotAction {
                 }
             }
 
+            FileManager.save(FileManager.getBotScript(name), content);
+
+            FileManager.save(FileManager.getBotLog(name), "[]");
+
             FileManager.save
                     (
                             FileManager.getBotSetting(name),
@@ -36,13 +40,8 @@ public class CreateBotAction {
                                     "\t\t\"apiLevel\":1,\n" +
                                     "\t\t\"Bridge\":false\n" +
                                     "\t}\n" +
-                                    "}\n"
+                                    "}"
                     );
-
-            FileManager.save(FileManager.getBotScript(name), content);
-
-            FileManager.save(FileManager.getBotLog(name), "[]");
-            FileManager.save(FileManager.getBotType(name), "msgbot");
         }
     }
 }

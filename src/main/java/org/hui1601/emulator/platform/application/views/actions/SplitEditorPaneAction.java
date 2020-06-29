@@ -32,7 +32,7 @@ public class SplitEditorPaneAction {
     }
 
     // 현재 가로만 지원
-    public static void update(IEditorTab tab, Side pos) {
+    public static void update(IEditorTab tab, Side pos) throws MalformedURLException {
         // IEditor Pane
         List<Node> panes = pane.getItems();
 
@@ -41,8 +41,12 @@ public class SplitEditorPaneAction {
         int index = panes.indexOf(editor);
 
         switch (pos) {
-            case RIGHT -> update(index + 1);
-            case LEFT -> update(index);
+            case RIGHT:
+                update(index + 1);
+                break;
+            case LEFT:
+                update(index);
+                break;
         }
     }
 }

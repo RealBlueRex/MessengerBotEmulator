@@ -4,9 +4,6 @@
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="org.mozilla.javascript.annotations.JSFunction" />
     </list>
-    <writeAnnotations>
-      <writeAnnotation name="javafx.fxml.FXML" />
-    </writeAnnotations>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">

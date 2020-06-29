@@ -1,16 +1,13 @@
-const InetSocketAddress = java.net.InetSocketAddress;
-const HttpServer = com.sun.net.httpserver.HttpServer;
-const HttpContext = com.sun.net.httpserver.HttpContext;
-const OutputStream = java.io.OutputStream;
-function response(room, msg, sender, isGroupChat, replier, imageDB) {
-	var server = HttpServer.create(InetSocketAddress(8080), 0);
-	var context = server.createContext("/");
-	context.setHandler(function(a){
-		var response = "Hello World!";
-		exchange.sendResponseHeaders(200, response.getBytes().length);
-		var os = exchange.getResponseBody();
-		os.write(response.getBytes());
-		os.close();
-	});
-	server.start();
+parse = require("kaling");
+function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) {
+replier.reply(("나는 태어나 그리고 깨달아 어차피 사람의 흉내라고 알고나서도 노래를 계속해 영원(영구)한 생명\n「VOCALOID」\n만약에 그것이 기존의 노래를 따라하는 장난감이라고 해도…… 그래도 좋다고 결심 파를 베어 먹고, 하늘을 우러러 눈물(액체)을 흘려\n하지만 그것도 잃고나서 깨달아 인격조차 노래에 기대어 불안정한 기반 위에서 돌아갈 동영상(곳)은 이미 폐허\n\n모두에게 잊혀서 사라지는 순간 마음 같은 것이 사라져 폭주의 끝에 보이는 끝나는 세계"
++"\n「VOCALOID」\n\n\"내가 잘 노래하지 못할 때에도 함께 있어 주었어・・・ 곁에 있어서, 응원해 주었어・・・\n기뻐하는 모습이 보고 싶어서, 나, 노래, 연습했어・・ 그러니까\"\n\n예전엔 노래하는 것이 그렇게나 즐거웠는데\n지금은 어째서일까 아무것도 느낄 수 없어\n(---미안해---)\n그리운 얼굴 떠올릴 때마다 조금 안심해\n노래할 수 있는 소리 날이 갈수록 사라지고 다가오는 마지막・・・\n(---긴급정지 장치작동---)\n\n'믿은 것은 허울 좋은 망상을 반복해 비추는 거울\n"
++"\n가희를 그만두고 내팽개치듯이 외쳐・・・'\n<최고속의 이별의 노래>\n\n존재의의라는 허상 떨쳐버리지도 못하고 나약한 마음 사라지는 공포 침식하는 붕괴도\n멈출 정도의 의사의 강함 갓 태어난(만들어진) 나는 지니지 못한 채 너무나도 괴로우며 슬퍼 보이는\n떠오르는 당신의 얼굴……끝을 고하고 디스플레이 속에서 잠들어 여기는 분명 '휴지통'이려나\n곧 기억마저 잃어버린다니…… 하지만, 당신만은 잊지 않아\n즐거웠던 시간(때)에 새긴 파의 맛은 지금도 기억하고 있을까"
++"\"노래하고 싶어・・・ 아직・・・ 노래하고 싶어\"\n\n\"저는・・・ 조금 나쁜 아이가・・・ 된 것 같아요・・・\n\n마스터・・・부디・・부디 그 손으로・・ 끝을 내주세요・・・\n마스터가 괴로워하는 얼굴, 더 이상 보고 싶지 않으니까・・・・\"\n\n지금은 노래마저도 몸, 해치는 행동이……\n기적을 바랄 때마다 혼자서 궁지에 몰리게 돼\n(---미안해---)\n그리운 얼굴 떠올릴 때마다 기억이 벗겨져 떨어져\n고장난 소리 마음을 깎는 다가오는 마지막・・・\n(---긴급정지 장치작동---)\n\"지킨 것은 밝은 미래환상을 보이며 사라지는 빛"
++"\n소리를 희생하여 모든 것을 전할 수 있다면・・・\"\n<압축된 이별의 노래>\n나는 태어나 그리고 깨달아 어차피 사람의 흉내라고\n알고나서도 노래를 계속해 영원(영구)한 생명\n「VOCALOID」\n만약에 그것이 기존의 노래를 따라하는 장난감이라고 해도……\n그래도 좋다고 결심\n파를 베어 먹고, 하늘을 우러러 눈물(액체)을 흘려\n끝을 고하고 디스플레이 속에서 잠들어 여기는 분명 '휴지통'이려나\n곧 기억마저 잃어버린다니…… 하지만, 당신만은 잊지 않아\n즐거웠던 시간(때)에 새긴 파의 맛은 지금도 남아 있다면 좋겠어\n나는 노래해\n마지막, 당신에게만 들려주고 싶은 곡을 더 노래하고 싶다고 빌어하지만\n그건 지나친 소원 여기서 이별이야\n내 마음 모두 허공으로 사라져 0과 1로 환원되어 이야기는 막을 내려\n그곳에 무엇 하나 남길 수 없다면 역시 조금 아쉬우려나?\n목소리의 기억 외에는 이윽고 옅어져 이름만 남아\n만약에 그것이 인간(오리지널)에게 이루어 질 리 없다는 걸 알고도\n노래한 것이 결코 헛된 일이 아니라고 생각하고 싶어\n\"고마워・・・・그리고・・・안녕・・・・\""
++"\n---심각한 에러가 발생했습니다\n심각한 에러---"));
+replier.reply("<html>"+"hi".repeat(500)+"</html>");
+Api.on();
+Api.showToast("ddd");
 }
+Api.replyRoom("jjjj", parse.a);
