@@ -21,11 +21,11 @@ public class DataBase extends ScriptableObject {
     public String getClassName() {
         return "DataBase";
     }
-
+    public String DataBaseSavePath = "";
     @JSFunction
     public String setDataBase(String fileName, String data) {
         try {
-            File file = new File("Sdcard_Root/Bot_Database/" + fileName);
+            File file = new File(DataBaseSavePath + fileName);
 
             file.getParentFile().mkdirs();
             file.createNewFile();
@@ -45,7 +45,7 @@ public class DataBase extends ScriptableObject {
     @JSFunction
     public String getDataBase(String fileName) {
         try {
-            File file = new File("Sdcard_Root/Bot_Database/" + fileName);
+            File file = new File(DataBaseSavePath + fileName);
             if (!file.exists()) {
                 return null;
             }
@@ -66,7 +66,7 @@ public class DataBase extends ScriptableObject {
     @JSFunction
     public String appendDataBase(String fileName, String data) {
         try {
-            File file = new File("Sdcard_Root/Bot_Database/" + fileName);
+            File file = new File(DataBaseSavePath + fileName);
 
             file.getParentFile().mkdirs();
             file.createNewFile();
@@ -86,7 +86,7 @@ public class DataBase extends ScriptableObject {
     @JSFunction
     public Boolean removeDataBase(String fileName) {
         try {
-            File file = new File("Sdcard_Root/Bot_Database/" + fileName);
+            File file = new File(DataBaseSavePath + fileName);
 
             if (!file.exists()) {
                 return false;

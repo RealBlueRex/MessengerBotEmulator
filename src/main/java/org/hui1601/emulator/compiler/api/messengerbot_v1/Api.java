@@ -1,5 +1,6 @@
 package org.hui1601.emulator.compiler.api.messengerbot_v1;
 
+import org.hui1601.emulator.Launcher;
 import org.hui1601.emulator.compiler.engine.ScriptEngine;
 import org.hui1601.emulator.compiler.engine.ScriptManager;
 import org.hui1601.emulator.managers.BotManager;
@@ -8,10 +9,15 @@ import org.hui1601.emulator.platform.application.views.actions.AddChatMessageAct
 import org.hui1601.emulator.platform.application.views.actions.ShowNotificationAction;
 import org.hui1601.emulator.platform.application.views.actions.ShowToastMessageAction;
 import org.hui1601.emulator.settings.Settings;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.jsoup.Jsoup;
 import org.mozilla.javascript.*;
 import org.mozilla.javascript.annotations.JSFunction;
 
 import java.io.File;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class Api extends ScriptableObject {
@@ -182,7 +188,30 @@ public class Api extends ScriptableObject {
 
     @JSFunction
     public String papagoTranslate(String sourceLanguage, String targetLanguage, String data, Boolean errorToString) {
-        return null;
+        String id, secret;
+        try {
+            id = "tG5JVqBz98300Ph5DbGN";
+            secret = "Iq92AFKqc0";
+            String result = Jsoup.connect("https://openapi.naver.com/v1/papago/n2mt")
+                    .timeout(Settings.getPublicSetting("debug").getInt("htmlTimeOut"))
+                    .userAgent("Messenger Bot Emulator " + Launcher.version)//user agent
+                    .ignoreContentType(true)
+                    .header("X-Naver-Client-Id", id)//papago client id
+                    .header("X-Naver-Client-Secret", secret)//papago client secret key
+                    .requestBody("source=" + sourceLanguage + "&target=" + targetLanguage + "&text="+ URLEncoder.encode(data, StandardCharsets.UTF_8))
+                    .post()
+                    .body()
+                    .toString();
+            JSONParser parser = new JSONParser();
+            JSONObject json = (JSONObject) parser.parse(result);
+            return (String)((JSONObject)((JSONObject)json.get("message")).get("result")).get("translatedText");
+        }catch (Exception e){
+            if(errorToString) {
+                return e.toString();
+            }
+            Context.reportError(e.toString());
+        }
+        return "";
     }
 
     @JSFunction

@@ -11,6 +11,8 @@
 
 function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) 
 {
-replier.reply("a".repeat(1000));
-	replier.reply(Number.isNaN(NaN));
+msg = Number(msg);
+  msg = msg.toLocaleString();
+  replier.reply(msg)
+
 }
