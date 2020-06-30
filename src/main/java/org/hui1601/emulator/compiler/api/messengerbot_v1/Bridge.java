@@ -17,10 +17,10 @@ public class Bridge extends ScriptableObject {
     }
 
     @JSFunction
-    public ScriptableObject getScopeOf(String name) {
-        if (ScriptEngine.container.get(name) != null) {
+    public ScriptableObject getScopeOf(String scriptName) {
+        if (ScriptEngine.container.get(scriptName) != null) {
             try {
-                return ScriptEngine.container.get(name).getScope();
+                return ScriptEngine.container.get(scriptName).getScope();
             } catch (Throwable e) {
                 Context.reportError(e.toString());
             }
@@ -31,7 +31,7 @@ public class Bridge extends ScriptableObject {
     }
 
     @JSFunction
-    public Boolean isAllowed(String name) {
-        return (Boolean) Settings.getScriptSetting(name).getJSONObject("options").get("Bridge");
+    public Boolean isAllowed(String scriptName) {
+        return (Boolean) Settings.getScriptSetting(scriptName).getJSONObject("options").get("Bridge");
     }
 }

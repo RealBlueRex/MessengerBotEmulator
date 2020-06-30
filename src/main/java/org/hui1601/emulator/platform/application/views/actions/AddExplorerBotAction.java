@@ -78,11 +78,7 @@ public class AddExplorerBotAction {
         item.setOnMouseClicked(event ->
         {
             if (MouseButton.PRIMARY.equals(event.getButton()) || MouseButton.MIDDLE.equals(event.getButton())) {
-                try {
-                    OpenScriptTabAction.update(name);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                }
+                OpenScriptTabAction.update(name);
             }
         });
 

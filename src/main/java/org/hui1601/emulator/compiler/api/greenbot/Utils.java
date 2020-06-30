@@ -92,23 +92,7 @@ public class Utils extends ScriptableObject {
     }
     @JSFunction
     public static String translate(String lang1, String lang2, String value){
-        try {
-            String result = Jsoup.connect("https://openapi.naver.com/v1/papago/n2mt")
-                    .timeout(Settings.getPublicSetting("debug").getInt("htmlTimeOut"))
-                    .userAgent("Messenger Bot Emulator " + Launcher.version)//user agent
-                    .ignoreContentType(true)
-                    .header("X-Naver-Client-Id", "tG5JVqBz98300Ph5DbGN")//papago client id
-                    .header("X-Naver-Client-Secret", "Iq92AFKqc0")//papago client secret key
-                    .requestBody("source=" + lang1 + "&target=" + lang2 + "&text="+ URLEncoder.encode(value, StandardCharsets.UTF_8))
-                    .post()
-                    .toString();
-            result = removeTags(result);
-            JSONParser parser = new JSONParser();
-            JSONObject json = (JSONObject) parser.parse(result);
-            return (String)((JSONObject)((JSONObject)json.get("message")).get("result")).get("translatedText");
-        }catch (Exception e){
-            Context.reportError(e.toString());
-        }
+        new ShowToastMessageAction("Utils.translate;는 더 이상 작동하지 않습니다.\nApi.papagoTranslate(); 함수를 사용해주세요.", 0, 0);
         return "";
     }
     @JSFunction
