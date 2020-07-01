@@ -32,12 +32,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3-rc-1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bots/TEST/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/bots/TEST/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bots/hi/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/bots/hi/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/global_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/global_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/global_setting.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/global_setting.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/script_default.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/script_default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/script_unified.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/script_unified.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/greenbot/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/Bridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/Bridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/AddExplorerBotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/AddExplorerBotAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenScriptTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/platform/application/views/actions/OpenScriptTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/api/messengerbot_v1/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/compiler/engine/ScriptEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/settings/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hui1601/emulator/settings/Settings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,26 +229,26 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="838" y="437" width="402" height="206" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1593357480142" />
-    <state width="913" height="244" key="GridCell.Tab.0.bottom" timestamp="1593532175949">
+    <state width="1385" height="328" key="GridCell.Tab.0.bottom" timestamp="1593598488317">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="938" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
-    <state width="913" height="244" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1593532175949" />
-    <state width="913" height="244" key="GridCell.Tab.0.center" timestamp="1593532175949">
+    <state width="1385" height="328" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1593598488317" />
+    <state width="1385" height="328" key="GridCell.Tab.0.center" timestamp="1593598488317">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="938" height="292" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
-    <state width="913" height="244" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1593532175949" />
-    <state width="913" height="244" key="GridCell.Tab.0.left" timestamp="1593532175948">
+    <state width="1385" height="328" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1593598488317" />
+    <state width="1385" height="328" key="GridCell.Tab.0.left" timestamp="1593598488317">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="938" height="292" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
-    <state width="913" height="244" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1593532175948" />
-    <state width="913" height="244" key="GridCell.Tab.0.right" timestamp="1593532175949">
+    <state width="1385" height="328" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1593598488317" />
+    <state width="1385" height="328" key="GridCell.Tab.0.right" timestamp="1593598488317">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="938" height="292" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1590795345481" />
-    <state width="913" height="244" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1593532175949" />
+    <state width="1385" height="328" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1593598488317" />
     <state x="440" y="114" width="1384" height="851" key="SettingsEditor" timestamp="1591701533774">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

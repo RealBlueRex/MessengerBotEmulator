@@ -1,30 +1,18 @@
 package org.hui1601.emulator.compiler.api.greenbot;
 
-import org.hui1601.emulator.Launcher;
-import org.hui1601.emulator.managers.FileManager;
 import org.hui1601.emulator.platform.application.views.actions.ShowToastMessageAction;
-import org.hui1601.emulator.platform.openapi.IJSONObject;
-import org.hui1601.emulator.platform.ui.components.ILogItem;
 import org.hui1601.emulator.settings.Settings;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.jsoup.Jsoup;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ScriptableObject;
 import org.mozilla.javascript.annotations.JSFunction;
 
 import java.awt.*;
-import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Utils extends ScriptableObject {
     final String bot_name;

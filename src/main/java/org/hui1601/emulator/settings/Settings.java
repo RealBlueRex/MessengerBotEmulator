@@ -32,7 +32,7 @@ public class Settings {
         }
 
         public void putString(String type, String data) {
-            put(type, data);
+            Object put = put(type, data);
             apply();
         }
 

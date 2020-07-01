@@ -24,7 +24,7 @@ public class ScriptEngine {
 
     public static void run(String room, String message, String sender, boolean isGroupChat, ImageDB imageDB, String packageName) {
         for (String name : FileManager.getBotNames()) {
-            if (BotManager.getPower(name)) {
+            if (!BotManager.getPower(name)) {
                 continue;
             }
             if (!container.containsKey(name)) {

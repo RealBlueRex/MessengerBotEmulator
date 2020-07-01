@@ -5,7 +5,7 @@
 		"bot":"DEBUG BOT",
 		"isGroupChat":true,
 		"room":"DEBUG ROOM",
-		"htmlTimeOut":1000
+		"htmlTimeOut":10000
 	},
 	"program":{
 		"autoCompile":true,
@@ -13,17 +13,17 @@
 		"autoSave":true
 	},
 	"device":{
-		"phoneModel":"lavender",
 		"androidVersionCode":"29",
-		"build":"android.os.Build@c36783a",
-		"batteryStatus":5,
 		"batteryTemperature":290,
 		"batteryVoltage":4239,
+		"isCharging":true,
+		"androidVersionName":"10",
+		"phoneModel":"lavender",
+		"build":"android.os.Build@c36783a",
+		"batteryStatus":5,
 		"phoneBrand":"ac",
 		"plugType":"ac",
-		"isCharging":true,
 		"batteryHealth":3,
-		"androidVersionName":"10",
 		"batteryLevel":100
 	}
 }
